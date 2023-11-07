@@ -1,0 +1,560 @@
+receiver,projectName,activationDatetime,deployDateTime,validDataUntilDatetime,recoverDateTime,stationName,dropDeadDate,idPk,downloadDateTime,deployLat,deployLong,comments,receiverStatus,mooringType,amplifierSensitivity,hydrophoneSensitivity,recordingName,hydrophoneCableLength,sampleRate,acousticreleasenumber
+POD-407,WinMon.be_CPOD,2013-04-23,2013-04-23,2013-07-02,,GB,,3512,,51.4492166667,2.8787166667,,Active,,,,,,,
+POD-3401,Lifewatch,2020-09-21,2020-09-30,2021-03-09,2021-03-09,bpns-Birkenfels,,9941,,51.64816667,2.535833,,Available,bottom-mooring,,,,,,"VR2AR-547694 - 29-09-2020 09:09"
+POD-3331,Lifewatch,2022-06-02,2022-06-02,2022-08-19,2022-08-19,bpns-Grafton,,26456,,51.40667,2.819,,Available,bottom-mooring,,,,,,"VR2AR-547690 - 01-06-2022 10:06"
+"B&K NEXUS-1",PhD_Parcerisas,2020-06-01,2020-06-01,,2020-06-01,"bpns-Nautica Ena",,9853,2020-06-01,51.302016,2.877948,"2 weights on rope didnt hold the hydrophone vertical in the water, so hydrophone measured the surface sounds.",Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20200608_SailingTrip\Nautica Ena_3.16",1,192,
+"B&K NEXUS-1",PhD_Parcerisas,2020-05-08,2020-05-08,,2020-05-08,bpns-Loreley,,9821,2020-05-08,51.297942,2.911936,"File 842: min 5:50 ref signal.",Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20200508_Simon Stevin\Loreley_3.16",4.5,192,
+POD-409,WinMon.be_CPOD,2013-01-23,2013-01-23,2013-03-28,2013-03-28,CPN,,3528,,51.5903333333,3.0050833333,,Available,,,,,,,
+POD-408,WinMon.be_CPOD,2014-11-05,2014-11-05,2015-02-17,,bpns-Gootebank,,3408,,51.4481,2.8765,,Active,surface-buoy,,,,,,
+POD-3401,Lifewatch,2022-03-15,2022-03-25,2022-08-05,2022-08-05,bpns-Westhinder,,25704,,51.380817,2.452667,"Aquaflight deployment, tripod",Available,bottom-mooring,,,,,,"VR2AR-547654 - 25-03-2022 10:03"
+"SOUNDTRAP STHF300-67416073",Apelafico_acoustics,2023-06-27,2023-06-27,,,bpns-APCpower2,,59059,,51.57488,2.987042,"apelafico mooring",Active,bottom-mooring,,,,,,"VR2AR-550755 - 27-06-2023 12:06"
+POD-2729,Lifewatch,2020-06-15,2020-06-17,2020-12-21,2021-03-09,bpns-Birkenfels,,9289,,51.648167,2.535833,"acoustic release: new battery VR2AR-546893",Available,bottom-mooring,,,,,,"VR2AR-546893 - 17-06-2020 08:06"
+POD-3331,Lifewatch,2022-10-14,2022-10-17,2023-03-16,,bpns-Birkenfels,,29098,,51.6483,2.5361833,,Available,bottom-mooring,,,,,,"VR2AR-547654 - 17-10-2022 09:10"
+POD-2729,Lifewatch,2021-03-09,2021-03-09,2021-09-15,2021-09-15,bpns-Faulbaums,,12120,,51.3345,2.615,,Available,bottom-mooring,,,,,,"VR2AR-547654 - 09-03-2021 05:03"
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-09,2021-06-09,,,bpns-VG,,12647,,51.389929,2.769902,"No big boats close by 
+The drifting is not a straight line but a curve 
+Change of amplitude due to overload
+
+Simultaneously recording with 12675",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\VG2_10",4.5,96,
+POD-2724,Lifewatch,2017-06-16,2017-06-20,,2018-01-12,bpns-WK16,,2687,,51.3075,2.909833333,"no data",Active,surface-buoy,,,,,,
+POD-3400,Lifewatch,2020-07-13,2020-07-13,2020-11-12,2021-01-14,bpns-Grafton,,9573,,51.4064667,2.818966667,"547692 ACOUSTIC RELEASE",Available,bottom-mooring,,,,,,"VR2AR-547692 - 13-07-2020 09:07"
+"B&K NEXUS-1",PhD_Parcerisas,2020-07-13,2020-07-13,,2020-07-13,bpns-Faulbaums,,9824,2020-07-13,51.336373,2.617329,"Big ship close by stopped with engine on.",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20200713_Simon Stevin\Faulbaums",5,192,
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2020-09-29,2020-09-29,,,bpns-Westhinder,,12546,,51.3811667,2.4527,,Active,bottom-mooring,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\200929 Tripode\Westhinder",,96,
+"SOUNDTRAP ST300-5118",Apelafico_acoustics,2021-06-28,2021-07-05,,2021-09-15,bpns-AP_CW,,13250,,51.54153,2.91744,,Active,bottom-mooring,,,,,,
+POD-3219,Apelafico_acoustics,2023-06-20,2023-06-30,2023-10-02,2023-10-02,bpns-APGrafton,,57103,,51.440645,2.8185,,Available,bottom-mooring,,,,,,"VR2AR-550762 - 30-06-2023 09:06"
+POD-1878,Apelafico_acoustics,2023-03-06,2023-05-07,2023-06-16,2023-06-16,dpns-Borssele3,,53923,,51.668517,3.0753,,Available,bottom-mooring,,,,,,
+POD-3112,Lifewatch,2022-06-02,2022-06-02,2022-10-14,2022-10-14,bpns-Buitenratel,,26455,,51.2403,2.50477,,Active,bottom-mooring,,,,,,"VR2AR-546898 - 01-06-2022 07:06"
+"B&K NEXUS-1",PhD_Parcerisas,2020-05-08,2020-05-08,,2020-05-08,bpns-Loreley,,9820,2020-05-08,51.297,2.908581,"Bad, wrong sensitivity.",Available,surface-buoy,"31.6 mV",-150,"\\qarchive\data_sensors\b&k\COVID-19\20200508_Simon Stevin\Loreley_31.6",4.5,192,
+POD-2955,WinMon.be_CPOD,2017-06-10,2017-06-15,2017-09-28,2017-12-22,D7,,3379,2017-12-22,51.55265,2.9179166667,,Available,bottom-mooring,,,,,,
+POD-2976,Lifewatch,2019-06-07,2019-06-11,2019-11-30,2020-05-06,"bpns-Reefballs Belwind",,5096,,51.704667,2.813167,"pod nr in cpod.exe was wrong",Available,bottom-mooring,,,,,,"VR2AR-546047 - 11-06-2019 12:06"
+POD-3416,Apelafico_acoustics,2022-01-13,2022-01-14,2022-03-18,2022-03-18,bpns-APCpower4,,13367,,51.532983,2.933061,,Available,bottom-mooring,,,,,,"VR2AR-550761 - 14-01-2022 01:01"
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2020-04-29,2020-04-29,,2020-04-29,bpns-Westerbroek,,9936,2020-04-29,51.278384,2.831707,,Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\200429 Zeekat\Westerbroek",5,500,
+POD-2422,Lifewatch,2019-10-22,2019-11-06,2020-04-05,2020-06-17,bpns-Birkenfels,,6172,,51.64928333,2.535133333,547692,Active,bottom-mooring,,,,,,"VR2AR-547692 - 06-11-2019 02:11"
+POD-1611,WinMon.be_CPOD,2018-01-10,2018-01-23,2018-04-27,,bpns-MOW1,,4010,,,,,Active,bottom-mooring,,,,,,
+POD-2956,Lifewatch,2017-10-20,2018-01-11,,,bpns-Gootebank,,3250,,51.4491666667,2.8786666667,"ODNATUUR pod. lost",Active,surface-buoy,,,,,,
+POD-2422,Lifewatch,2019-02-11,2019-02-14,2019-08-23,2019-08-23,bpns-Reefballs-cpower,,4576,2019-08-23,51.580667,2.995167,VR2AR-547694,Active,bottom-mooring,,,,,,"VR2AR-547692 - 14-02-2019 10:02"
+RESEA320-EA-SDA14_2003003,PhD_Parcerisas,2023-03-02,2023-03-01,,2023-07-14,bpns-Grafton,,52577,,51.406666,2.819,"1-channel hydrophone. Channel A: GP1190M-LP 132. Continuous recording. Old battery cable, checked and working. Previous deployment had not written anything in the HD. HD was changed and tested and worked fine. Firmware updated.",Available,bottom-mooring,,-180,"\\qarchive\data_sensors\rtsys\PhD_Clea\Grafton_20230301",,48,"VR2AR-547693 - 01-03-2023 09:03"
+POD-2730,Lifewatch,2016-10-21,2016-10-25,2017-03-10,2017-03-24,"bpns-Reefballs Belwind",,2594,2017-03-24,51.704417,2.812594,,Available,surface-buoy,,,,,,
+POD-2725,Lifewatch,2016-06-27,2016-06-28,2016-10-24,2016-10-24,bpns-Gootebank,2016-10-01,2554,2017-03-15,51.4491666667,2.8786666667,,Lost,surface-buoy,,,,,,
+POD-9991,WinMon.be_CPOD,2017-09-01,2017-09-22,2017-09-22,2017-09-22,T1,,2765,2017-09-22,,,,Available,,,,,,,
+POD-2420,Lifewatch,2016-10-21,2016-10-24,2016-10-24,,bpns-Gootebank,,2593,,51.4491666667,2.8786666667,LOST,Lost,surface-buoy,,,,,,
+POD-2725,WinMon.be_CPOD,2017-09-21,2017-09-28,2017-12-20,,D7,,3388,,51.55265,2.9179166667,,Lost,bottom-mooring,,,,,,
+"SOUNDTRAP STHF4300-6293",Apelafico_acoustics,2023-06-27,2023-06-27,,2023-09-07,bpns-APGardencity,,59060,,51.485816,2.307382,"Apelafico mooring",Available,bottom-mooring,,,,,,
+POD-408,WinMon.be_CPOD,2019-10-10,2019-10-17,,,"BW C9C8D9D8",,10074,,51.64793,2.792217,,Active,bottom-mooring,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-06-03,2020-06-03,,2020-06-03,bpns-WK8,,9857,2020-06-03,51.390805,3.051952,,Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20200608_SailingTrip\WK8",3,192,
+POD-2423,Lifewatch,2014-06-20,2014-06-23,2014-08-09,2014-09-17,bpns-Lottobuoy,2014-09-20,2573,2017-03-22,51.5666667,2.983333,,Lost,surface-buoy,,,,,,
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2020-04-27,2020-04-27,,2020-04-27,bpns-Coast,,9927,2020-04-27,51.25368333,2.941583333,,Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\200427 Zeekat\Coast",3,500,
+POD-2977,Lifewatch,2017-06-21,2017-06-21,2017-12-29,2019-05-02,bpns-Birkenfels,2017-09-21,2683,,51.6493333,2.5338333,"Retrieved when buoy was changed",Available,surface-buoy,,,,,,
+POD-2422,Lifewatch,2021-02-22,2021-02-25,2021-06-02,2021-06-23,bpns-Reefballs-cpower,,11955,,51.580667,2.996,"nieuwe batterij",Active,bottom-mooring,,,,,,"VR2AR-547693 - 25-02-2021 09:02"
+POD-3112,Lifewatch,2020-07-10,2020-07-13,2020-07-13,2020-10-21,"bpns-Nautica Ena",,9096,,51.3006333,2.8803666667,"547695; nothing recorded, sd card was out of holder, water inside cpod; jan2021 send for repairment to chelonia. Data on sd card was from birkenfels recording 2018!",Active,bottom-mooring,,,,,,"VR2AR-547695 - 13-07-2020 12:07"
+"B&K NEXUS-1",PhD_Parcerisas,2020-10-12,2020-10-12,2020-10-12,2020-10-12,bpns-Faulbaums,,13245,2020-10-12,51.336373,2.617329,"Sailing campaign. Method sail-drift. Very quiet, short recording.",Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20201012_SailingTrip\Faulbaums_3.16",6,192,
+RESEA320-EA-SDA14_2003003,PhD_Parcerisas,2022-01-19,2022-01-18,2022-05-11,2022-06-02,bpns-Grafton,,15810,,51.40647,2.8185,"Deployment time not accurate. Check with LW campaign. 1-channel A hydrophone GP1516M 185. 24 hours on 24 hours off",Available,bottom-mooring,,-168,"\\qarchive\data_sensors\rtsys\PhD_Clea\Grafton_20220113",,48,"VR2AR-549587 - 18-01-2022 11:01"
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-10,2021-06-10,,,bpns-Faulbaums,,12657,,51.3345,2.514983,,Available,surface-buoy,3.16,-170,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\Faulbaums_3.16",4.5,96,
+POD-2578,Lifewatch,2018-06-22,2018-06-27,2018-10-09,,"bpns-Reefballs Belwind",,3809,,51.704417,2.812594,,Available,bottom-mooring,,,,,,
+POD-7041,Lifewatch,2023-06-23,2023-06-28,,,bpns-Gardencity,,57132,,51.48648,2.30483,,Active,bottom-mooring,,,,,,"VR2AR-546899 - 28-06-2023 12:06"
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-09,2021-06-09,,,bpns-Noordster,,12651,,51.28888333,2.941083333,"180 from wreck at the start
+There is a boat fishing at the beginning, leaves when starting recording
+16:15 (local time)  boat passes by 
+16:48 (local time)  plane passes by
+
+Simultaneously recording with 12677",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\Noordster",2.5,96,
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-09,2021-06-09,,,bpns-Buitenratel,,12654,,51.193827,2.460398,"Simultaneously recording with 12679",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\Buitenratel_10",4.5,96,
+POD-7601,Lifewatch,2023-09-06,2023-09-14,,,bpns-Westhinder,,58694,,51.380817,2.4526,,Active,bottom-mooring,,,,,,"VR2AR-549590 - 06-09-2023 12:09"
+POD-2730,Lifewatch,2017-03-13,2017-04-04,2017-07-24,2017-09-01,bpns-Birkenfels,2017-07-04,2629,,51.6493333,2.5338333,"STRANDED,",Available,bottom-mooring,,,,,,
+POD-2054,WinMon.be_CPOD,2015-04-15,2015-04-15,2015-05-05,2018-01-12,MOW1,,3370,2018-01-12,51.3567,3.1167,,Active,bottom-mooring,,,,,,
+POD-2723,Lifewatch,2016-11-18,2016-11-29,2016-11-29,,"bpns-oostdyck west",,2595,,51.2858333333,2.4386666667,LOST,Lost,surface-buoy,,,,,,
+POD-2052,WinMon.be_CPOD,2014-11-21,2014-11-21,2015-01-30,,MOW1,,3406,,51.3567,3.1167,,Active,bottom-mooring,,,,,,
+RESEA320-EA-SDA14_2003002,PhD_Parcerisas,2022-01-20,2022-01-19,2022-05-16,2022-06-02,bpns-Buitenratel,,15812,,51.2403,2.504,"1channel. Channel A: GP1516M 191. 24h-on 24h-off.",Available,bottom-mooring,,-168,"\\qarchive\data_sensors\rtsys\PhD_Clea\Buitenratel_20220119",,48,"VR2AR-549591 - 19-01-2022 10:01"
+POD-2728,Lifewatch,2017-06-26,2017-07-04,2017-07-04,2018-01-12,bpns-Reefballs-cpower,,2724,,51.58,2.99549,"didn't record",Available,bottom-mooring,,,,,,
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2021-06-10,2021-06-10,2021-06-10,2021-06-10,bpns-Birkenfels,,12683,,51.648269,2.532714,"HF click detector
+Fishing boat close by. 
+12:28 (local time) fishing boat leaves
+
+Simultaneously recording with 12660, 12661",Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\210609 SailingTrip\Birkenfels",4.5,96,
+POD-3401,Lifewatch,2021-07-12,2021-07-12,2022-01-19,2022-01-19,bpns-Buitenratel,,12756,,51.24033,2.504773,,Available,bottom-mooring,,,,,,"VR2AR-547693 - 12-07-2021 02:07"
+POD-2976,Lifewatch,2020-10-22,2020-11-18,2021-03-09,2021-03-09,bpns-Grafton,,10080,,51.40646667,2.818516667,,Available,bottom-mooring,,,,,,"VR2AR-549586 - 18-11-2020 11:11"
+POD-3329,Lifewatch,2019-10-21,2019-10-24,2020-02-20,2020-03-04,bpns-Faulbaums,,6169,,51.33443,2.61475,"Vemco 547697, 80% battery remind so no change",Available,bottom-mooring,,,,,,"VR2AR-547697 - 24-10-2019 08:10"
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2021-06-09,2021-06-09,2021-06-09,2021-06-09,bpns-VG,,12675,,51.389929,2.769902,"HF click detector
+No big boats close by 
+The drifting is not a straight line but a curve 
+Change of amplitude due to overload
+
+Simultaneously recording with 12646, 12647",Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\210609 SailingTrip\VG2",4.5,96,
+POD-3110,Lifewatch,2017-12-08,2018-01-12,2018-01-12,2018-06-27,bpns-Reefballs-cpower,,3366,,51.58,2.99549,"NO dATA",Available,bottom-mooring,,,,,,
+POD-3425,WinMon.be_CPOD,2019-06-17,2019-07-02,2019-10-17,2019-10-17,"BW C9C8D9D8",,6332,,51.64793,2.792217,,Available,bottom-mooring,,,,,,
+POD-2054,WinMon.be_CPOD,2014-03-27,2014-03-27,2014-05-21,,MOW1,,3420,,51.3566666667,3.1166666667,,Active,bottom-mooring,,,,,,
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2021-06-09,2021-06-09,2021-06-09,2021-06-09,bpns-WK8,,12674,,51.390805,3.051952,"HF click detector
+Far from wreck. Sounds from bumps of the boat and the waves
+9:15 (local time) 2 boats pass by at 1 (atlantic clipper) and 2 (unidentified) miles away. 
+Seems that we saw a seal at minute 27 of thre recording
+Very crowded place. Lots of traffic. 
+9:39 (local time) a ship very close by (silver ray)
+
+Simultaneously recording with 12645",Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\210609 SailingTrip\WK8",4.5,96,
+"B&K NEXUS-1",PhD_Parcerisas,2020-05-04,2020-05-04,,2020-05-04,bpns-Buitenratel,,9811,2020-05-04,51.240754,2.499811,"Coupling min 0 to 4:50. Boat min 9:10 to 9:30, 12:45 to 13:30",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20200504_Simon Stevin\Buitenratel Panton",6.5,192,
+POD-2421,Lifewatch,2019-10-22,2019-11-04,2020-04-13,2020-05-04,bpns-Westhinder,,4913,,51.38112,2.4527,"546622, new battery, new rope, same anode",Available,bottom-mooring,,,,,,"VR2AR-546622 - 04-11-2019 12:11"
+POD-3219,Lifewatch,2019-06-07,2019-06-14,2019-10-24,2019-10-24,bpns-Faulbaums,,5095,,51.33443,2.61475,"battery still on,",Available,bottom-mooring,,,,,,"VR2AR-547694 - 14-06-2019 12:06"
+POD-3423,WinMon.be_CPOD,2019-06-17,2019-07-02,2019-08-06,2019-10-16,"NW CP4",,6330,,51.6064,2.877033,"Attachment rope came loose on August 6th hence the end of data",Available,bottom-mooring,,,,,,
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2021-06-09,2021-06-09,2021-06-09,2021-06-09,bpns-Noordster,,12677,,51.28888333,2.941083333,"HF click detector
+180 from wreck at the start
+There is a boat fishing at tbe beggning, leaves when starting recording
+16:15 (local time)  boat passes by 
+16:48 (local time)  plane passes by
+
+Simultaneously recording with 12651",Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\210609 SailingTrip\Noordster",4.5,96,
+"SOUNDTRAP HF600-6714",Lifewatch,2023-06-29,2023-06-28,,2023-09-07,bpns-Gardencity,2023-07-25,57127,,51.48645,2.304829,"will be recording from 29/06/2023 at 18pm UTC. Deployed in tripod with clamps.",Available,bottom-mooring,,,"\\qarchive\data_sensors\soundtrap\broadband_acoustic_network\20230627_Gardencity",,48,"VR2AR-546899 - 28-06-2023 12:06"
+POD-407,WinMon.be_CPOD,2014-11-05,2014-11-05,2015-03-12,,"bpns-oostdyck west",,3407,,51.2858,2.4387,,Active,surface-buoy,,,,,,
+POD-1878,Apelafico_acoustics,2022-01-13,2022-01-14,2022-02-11,,bpns-APCpower2,,13364,,51.541151,2.917682,,Available,bottom-mooring,,,,,,"VR2AR-550762 - 14-01-2022 01:01"
+POD-3400,Lifewatch,2022-01-04,2022-01-19,2022-02-22,2022-06-21,bpns-Gardencity,,12884,,51.48645,2.304829,"multi-purpose mooring, contains old data on sd card!",Available,bottom-mooring,,,,,,"VR2AR-549588 - 19-01-2022 12:01"
+POD-3219,Lifewatch,2019-02-19,2019-02-22,2019-05-28,2019-05-28,bpns-Buitenratel,,4654,,51.240533,2.5032,"acoustic release 546047",Available,bottom-mooring,,,,,,"VR2AR-546047 - 22-02-2019 11:02"
+POD-2421,Lifewatch,2020-05-04,2020-05-06,2020-07-10,2020-09-10,bpns-Reefballs-cpower,,9275,,51.580667,2.996,"new rope; new battery, 546047. old data on sd card from 10/06/2020 19h47 onwards, shipped to chelonia for repairment jan 2021",Available,bottom-mooring,,,,,,"VR2AR-546047 - 06-05-2020 12:05"
+POD-3112,Lifewatch,2019-05-23,2019-05-29,2019-10-24,2019-10-24,bpns-Buitenratel,,5024,,51.24033,2.504773,"battery still on when retrieved, but data stopped in june. Must be hit by something! vanaf 2 juni is er een overload en kan er geen cp3 aangemaakt worden. 
+sd card was send to chelonia (10-03-2020)
+chelonia retrieved all data until recovery date time!",Active,bottom-mooring,,,,,,"VR2AR-547698 - 29-05-2019 08:05"
+POD-3111,Lifewatch,2017-12-08,2018-01-11,2018-01-11,2018-06-27,"bpns-Reefballs Belwind",,3365,,51.704417,2.812594,"NO DATA",Available,bottom-mooring,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-05-04,2020-05-04,,2020-05-04,bpns-Westhinder,,9810,2020-05-04,51.382996,2.45402,,Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20200504_Simon Stevin\Westhinder",6.5,192,
+POD-1873,Apelafico_acoustics,2023-03-06,2023-05-07,2023-06-16,,dpns-Borssele4,,53924,,51.747667,2.829,,Available,bottom-mooring,,,,,,
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2020-04-27,2020-04-27,,2020-04-27,bpns-Paragon,,9931,2020-04-27,51.26626667,2.9364,,Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\200427 Zeekat\Paragon",4,500,
+POD-2978,Lifewatch,2017-03-17,2017-03-30,2017-06-20,2017-06-20,"bpns-oostdyck west",2017-06-30,2626,2017-06-23,51.2858333333,2.4386666667,,Available,surface-buoy,,,,,,
+POD-408,WinMon.be_CPOD,2018-04-10,2018-05-15,2018-08-21,,MOW1,,3914,,,,,Active,bottom-mooring,,,,,,
+POD-3329,Lifewatch,2020-10-01,2020-10-01,2021-01-30,2021-01-30,"bpns-Nautica Ena",,9965,,51.300633,2.8803667,,Available,bottom-mooring,,,,,,"VR2AR-546047 - 01-10-2020 11:10"
+POD-3401,Lifewatch,2020-05-29,2020-06-02,2020-09-09,2020-09-09,bpns-Gardencity,,9489,,51.48613333,2.305183333,AR546622,Available,bottom-mooring,,,,,,"VR2AR-546622 - 02-06-2020 02:06"
+POD-2729,Lifewatch,2019-01-11,2019-01-28,2019-05-21,2019-05-21,"bpns-Nautica Ena",,4437,,51.3,2.86667,,Available,bottom-mooring,,,,,,"VR2AR-547698 - 29-01-2019 12:01"
+POD-3331,Lifewatch,2021-05-04,2021-05-10,2022-01-02,2022-03-25,bpns-Gardencity,,12464,,51.48611667,2.3051833,,Available,bottom-mooring,,,,,,"VR2AR-549589 - 10-05-2021 10:05"
+POD-2956,WinMon.be_CPOD,2017-06-10,2017-06-15,2017-09-28,,B9B8C8C9,,3364,,51.6505333333,2.7872,,Active,bottom-mooring,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-05-08,2020-05-08,,2020-05-08,bpns-Senator,,9823,2020-05-08,51.31501,2.945444,,Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20200508_Simon Stevin\Senator",1.5,192,
+POD-1614,WinMon.be_CPOD,2013-09-04,2013-09-04,2013-10-10,2013-10-10,GB,,3525,,51.4492166667,2.8787166667,,Available,,,,,,,
+POD-2053,WinMon.be_CPOD,2016-01-22,2016-01-22,2016-02-13,2016-02-13,MOW1,,3381,,51.3566666667,3.1166666667,,Available,bottom-mooring,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-10-12,2020-10-12,2020-10-12,2020-10-12,"bpns-Nautica Ena",,13244,2020-10-12,51.301856,2.880871,"Sailing campaign. Method: sail-drift.",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20201012_SailingTrip\Nautica Ena_10",6,192,
+POD-2976,Lifewatch,2022-03-24,2022-03-25,2022-08-05,2022-08-05,bpns-Faulbaums,,25771,,51.3347,2.615233,"aquaflight deployment! multipurpose mooring",Available,bottom-mooring,,,,,,"VR2AR-547693 - 25-03-2022 12:03"
+"B&K NEXUS-1",PhD_Parcerisas,2020-04-29,2020-04-29,,2020-04-29,"bpns-Heinkel 111",,9806,2020-04-29,51.222237,2.86342,"Some overload. Bad data min 23:40 to 27:20. At localtime 12:36 stop of the sonar from the boat.",Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20200429_Zeekat\Heinkel 111",5,192,
+POD-409,WinMon.be_CPOD,2014-06-30,2014-06-30,2014-11-05,,bpns-Gootebank,,3412,,51.4481,2.8765,,Available,surface-buoy,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-07-13,2020-07-13,,2020-07-13,bpns-Grafton,,9825,2020-07-13,51.406383,2.816516,"Minute 9:00 of recording , SIRIUS passes by.",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20200713_Simon Stevin\Grafton_10",5,192,
+POD-2976,Lifewatch,2020-07-10,2020-07-13,2020-10-01,2020-10-01,bpns-Faulbaums,,9574,,51.3345,2.615,"547691; battery still on",Available,bottom-mooring,,,,,,"VR2AR-547691 - 13-07-2020 11:07"
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2020-04-27,2020-04-27,,2020-04-27,bpns-Noordster,,9930,2020-04-27,51.28888333,2.941083333,,Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\200427 Zeekat\Noordster",4,500,
+"SOUNDTRAP ST600HF-7573","Duurzame economische dragers in Vlaamse kustvisserijgemeenschappen post-Brexit",2023-09-26,,,,,,59063,,,,,Active,,,,,,,
+POD-2976,Lifewatch,2019-01-10,2019-02-14,2019-05-27,2019-05-27,bpns-Grafton,,4436,,51.406833,2.818167,"VR2AR-547694, sd card was filled with older data....",Available,bottom-mooring,,,,,,"VR2AR-547692 - 10-10-2018 08:10"
+"B&K NEXUS-1",PhD_Parcerisas,2020-05-06,2020-05-06,,2020-05-06,bpns-Reefballs-cpower,,9815,2020-05-06,51.58179,2.997546,,Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20200506_Simon Stevin\Reefballs CPower",6.5,192,
+POD-2422,Lifewatch,2022-06-21,2022-06-21,2022-12-27,2023-02-22,bpns-Gardencity,,26984,,51.48645,2.304829,"old data on sd card as well",Active,bottom-mooring,,,,,,"VR2AR-549587 - 21-06-2022 08:06"
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-09,2021-06-09,,,bpns-Grafton,,12650,,51.406383,2.816516,"Boat all the time around trawling. 13:41 (local time) takes out the net
+
+Simultaneously recording with 12676",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\Grafton",4.5,96,
+"B&K NEXUS-1",PhD_Parcerisas,2020-05-08,2020-05-08,,2020-05-08,"bpns-Nautica Ena",,9822,2020-05-08,51.301856,2.880871,,Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20200508_Simon Stevin\Nautica Ena",4.5,192,
+POD-3416,Lifewatch,2022-05-06,2022-05-09,2022-10-17,2022-10-17,bpns-Birkenfels,2022-10-21,26380,2022-10-21,51.6483,2.53618,"rope 65m, normal tripod= EXTRA FLOATS
+receiver failed to release",Available,bottom-mooring,,,,,,"VR2AR-547694 - 09-05-2022 10:05"
+POD-2723,Lifewatch,2016-06-27,2016-07-14,2016-10-01,2016-10-24,"bpns-Oostendebank Oost",2016-10-14,2584,2017-03-24,51.2891667,2.8653333,,Lost,surface-buoy,,,,,,
+POD-2052,WinMon.be_CPOD,2019-10-10,2019-10-17,,,"BW C8C7D8D7",,10075,,51.65323,2.794367,"No valid data. Multiple logging errors for unclear reason (possibly battery?)",Active,bottom-mooring,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-10-12,2020-10-12,2020-10-12,2020-10-12,bpns-WK8,,15800,,51.390805,3.051952,"Bad recordings",Available,surface-buoy,"1 mV",-180,"\\qarchive\data_sensors\b&k\COVID-19\20201012_SailingTrip\WK8_1",6,192,
+POD-1614,WinMon.be_CPOD,2015-09-08,2015-09-25,2015-11-27,,Gootebank,,3375,,51.4481,2.8765,,Available,surface-buoy,,,,,,
+POD-3329,Lifewatch,2020-06-02,2020-06-03,2020-07-13,2020-07-13,bpns-Westhinder,,9497,,51.3811667,2.4527,"AR547691, 50m nieuw touw; frame needs to be galvanised soon. comes from Gardencity and functioned as an anode since it was dropped on the wreck.",Available,bottom-mooring,,,,,,"VR2AR-547691 - 02-06-2020 03:06"
+POD-3330,Lifewatch,2019-03-25,2019-03-28,2019-10-22,2020-06-02,bpns-Gardencity,,4760,,51.48583333,2.30515,"Tripod on Gardencity wreck so inclined. Diagonal support bracket and buoy tray were bent, possibly from during retrieval",Active,bottom-mooring,,,,,,"VR2AR-547691 - 28-03-2019 11:03"
+POD-1611,WinMon.be_CPOD,2011-03-21,2011-03-21,2011-04-29,,MOW1,,3504,,51.3566666667,3.1166666667,,Active,,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-05-07,2020-05-07,,2020-05-07,bpns-Gardencity,,9816,2020-05-07,51.487251,2.306804,"File 830: Some overload
+File 833: Boat min: 4:00 (SS)
+File 834: Simon Stevin was in the close neighbourhood",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20200507_Simon Stevin\Gardencity_10",6.5,192,
+POD-2053,WinMon.be_CPOD,2016-04-04,2016-04-04,2016-06-13,2016-06-13,Belwind_Release_2053,,3383,,51.6659333333,2.7999833333,,Available,bottom-mooring,,,,,,
+POD-2954,WinMon.be_CPOD,2018-08-24,2018-08-28,2018-12-09,2019-02-14,"NW CP1",,4692,2019-02-22,51.60823,2.896083,"Fake data from 9/12 onwards",Available,bottom-mooring,,,,,,
+"SOUNDTRAP ST300-5118",Apelafico_acoustics,2023-06-27,2023-06-27,,,bpns-Grafton,,59061,,51.40645,2.8185,"Apelafico mooring",Active,bottom-mooring,,,,,,"VR2AR-550762 - 30-06-2023 09:06"
+POD-3331,Lifewatch,2020-03-02,2020-03-04,2020-07-13,2020-07-13,bpns-Grafton,,9100,,51.40646667,2.818966667,"receiver 547690; battery still on",Available,bottom-mooring,,,,,,"VR2AR-547690 - 04-03-2020 12:03"
+POD-2422,Lifewatch,2015-06-18,2015-06-18,2015-08-23,2016-02-12,bpns-Lottobuoy,2015-09-18,2556,2017-03-30,51.5666667,2.983333,,Active,surface-buoy,,,,,,
+POD-2976,Lifewatch,2017-06-20,2017-06-20,2017-09-11,2017-10-09,"bpns-oostdyck west",2017-09-20,2684,,51.2858333333,2.4386666667,"stranded, battery still active",Available,surface-buoy,,,,,,
+"SOUNDTRAP ST300-5107",Apelafico_acoustics,2023-06-27,2023-06-27,,2023-09-05,bpns-APBelwind,,59058,,51.65615,2.79098,"apelafico mooring",Available,bottom-mooring,,,,,,"VR2AR-550761 - 27-06-2023 06:06"
+POD-3219,Lifewatch,2021-03-01,2021-03-09,2021-07-12,2021-07-12,bpns-Grafton,,12020,,51.40645,2.8185,"multipurpose mooring",Available,bottom-mooring,,,,,,"VR2AR-549591 - 09-03-2021 09:03"
+POD-2578,WinMon.be_CPOD,2016-04-25,2016-04-25,,,D7,,2589,,51.33145,2.55067,,Available,bottom-mooring,,,,,,
+POD-3329,Lifewatch,2020-03-13,2020-05-04,2020-06-02,2020-06-02,bpns-Westhinder,,9129,,51.38112,2.4527,"546622, soundtrap op zijarm geinstalleerd. nieuw touw 50m",Available,bottom-mooring,,,,,,"VR2AR-546622 - 04-05-2020 12:05"
+RESEA320-EA-SDA14_2003001,PhD_Parcerisas,2022-04-27,2022-03-25,2022-06-19,2022-08-05,bpns-Faulbaums,,25712,,51.3345,2.615,"Multipurpose mooring
+2-channel hydrophones. Channel A: GP1190M  130, Channel C: GP1190M  131. 24hours on 24 hours off.
+Activation time was 2022-03-26 00:00. 
+There is a problem with channel C more or less all over the deployment. 
+There is a problem with channel A between 5th of April and 27th of April. For this reason the activation datetime has been changed to 27th of April.",Available,bottom-mooring,,-180,"\\qarchive\data_sensors\rtsys\PhD_Clea\Faulbaums_20220325",,48,"VR2AR-547693 - 25-03-2022 12:03"
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2020-04-27,2020-04-27,,2020-04-27,bpns-Loreley,,9928,2020-04-27,51.29671667,2.758416667,,Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\200427 Zeekat\Loreley",3.5,500,
+POD-3165,"PAM Harbour porpoise Borssele, 2019-2024",2022-06-02,2022-06-02,2023-08-23,,MT01,,58995,,51.833888,3.057578,,Active,bottom-mooring,,,,,,
+POD-2422,Apelafico_acoustics,2023-03-06,2023-05-07,2023-06-16,,dpns-Borssele1,,53926,,51.839,3.236367,,Active,bottom-mooring,,,,,,
+POD-2054,WinMon.be_CPOD,2013-04-23,2013-04-23,2013-06-27,,MOW1,,3511,,51.3566666667,3.1166666667,,Active,,,,,,,
+POD-2978,Lifewatch,2022-06-21,2022-06-23,2022-10-17,2022-10-17,"bpns-Reefballs Belwind",,26985,,51.70442,2.813167,"batterij still on",Available,bottom-mooring,,,,,,"VR2AR-549588 - 23-06-2022 02:06"
+POD-2958,WinMon.be_CPOD,2018-04-10,2018-05-10,2018-08-22,2018-08-22,"BW C8C7D8D7",2018-08-23,4364,2018-08-23,51.65323,2.794367,"Battery running until download time",Active,bottom-mooring,,,,,,
+POD-408,WinMon.be_CPOD,2012-02-24,2012-02-24,2012-03-19,,MOW1,,3508,,51.3566666667,3.1166666667,,Active,,,,,,,
+POD-3153,WinMon.be_CPOD,2019-06-17,2019-07-02,2019-10-16,2019-10-16,"NW CP1",,6325,,51.60823,2.896083,,Available,bottom-mooring,,,,,,
+POD-2976,Lifewatch,2021-05-21,2021-05-26,2022-01-02,2022-03-18,"bpns-Reefballs Belwind",,12543,,51.704667,2.813167,,Available,bottom-mooring,,,,,,"VR2AR-547694 - 26-05-2021 09:05"
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-10,2021-06-10,,,bpns-Westhinder,,12658,,51.38095,2.452483333,"Night
+Acquired by Arthur
+
+Simultaneously recording with 12681",Available,surface-buoy,3.16,-170,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\Westhinder",4.5,96,
+POD-2422,Lifewatch,2023-09-25,2023-10-02,,,bpns-Cpower2,,59057,,51.57488,2.987042,"apelafico echosoundermooring",Active,bottom-mooring,,,,,,"VR2AR-550755 - 02-10-2023 09:10"
+POD-2954,WinMon.be_CPOD,2017-06-10,2017-06-15,2017-09-28,2017-12-19,A6,,3377,2017-12-19,51.5443333333,2.8947666667,,Available,bottom-mooring,,,,,,
+"SOUNDTRAP STHF300-67416073",Apelafico_acoustics,2021-06-28,2021-07-05,,2021-09-17,bpns-AP_BW,,13249,,51.65615,2.79098,,Active,bottom-mooring,,,,,,
+POD-2730,Lifewatch,2015-09-23,2015-10-29,2015-11-20,2016-01-20,bpns-D1,2016-01-31,2580,2017-03-22,51.2325,2.6431667,,Available,surface-buoy,,,,,,
+POD-3416,Lifewatch,2021-07-08,2021-07-12,2021-11-03,,bpns-Grafton,,12750,,51.40645,2.8185,,Available,bottom-mooring,,,,,,"VR2AR-549588 - 12-07-2021 08:07"
+POD-3416,Lifewatch,2020-05-04,2020-05-06,2020-09-10,2020-09-10,"bpns-Reefballs Belwind",,9276,,51.704667,2.813167,"new rope(50m), new battery, 547698; battery cpod still on upon retrievel, manually stopped 21/09/2020 UTC 09:00",Available,bottom-mooring,,,,,,"VR2AR-547698 - 06-05-2020 10:05"
+POD-3400,Lifewatch,2021-07-02,2021-07-05,2021-09-15,2021-09-15,AP-bpns-Cpower,,12740,,51.54153,2.91744,"60m rope multi-purpose mooring; cpod still on",Available,bottom-mooring,,,,,,"VR2AR-550755 - 05-07-2021 12:07"
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-10,2021-06-10,,,bpns-GardenCity,,12659,,51.487251,2.306804,"Capoeira (boat where we are) turns on instrumentation after 5 mintues (close to TSS and not safe without instrumentation on!)
+Start far away from the wreck because the current pushes us towards the  wreck
+
+Simultaneously recording with 12682",Available,surface-buoy,3.16,-170,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\GardenCity",4.5,96,
+POD-2725,Lifewatch,2018-01-29,2018-01-30,,,"bpns-Middelkerke South",,3424,,51.2455,2.698166667,LOST,Lost,surface-buoy,,,,,,
+POD-2729,Lifewatch,2017-06-16,2017-06-20,2018-01-12,2018-01-12,bpns-WK9,,2686,,51.4553333333,3.102,,Available,surface-buoy,,,,,,
+POD-3330,Lifewatch,2022-03-15,2022-03-18,2022-06-23,2022-06-23,"bpns-Reefballs Belwind",,25705,,51.704667,2.8136167,"tripod, battery still on",Active,bottom-mooring,,,,,,"VR2AR-547697 - 18-03-2022 09:03"
+POD-3331,Lifewatch,2019-07-10,2019-07-12,2019-10-22,2019-10-22,"bpns-Nautica Ena",,5103,,51.3,2.86667,"battery still on, all error on sd card, sd card was send to chelonia (10-03-2020).
+chelonia could retrieve all data on the card!! until recovery date time",Available,bottom-mooring,,,,,,"VR2AR-547697 - 12-07-2019 09:07"
+POD-2053,WinMon.be_CPOD,2014-04-03,2014-04-03,2014-08-24,,BlighBank,,3421,,51.703,2.8134,,Available,surface-buoy,,,,,,
+POD-2724,Lifewatch,2016-08-17,2016-08-19,2016-12-14,2016-12-14,bpns-WK9,2016-12-19,2587,2017-03-30,51.4553333333,3.102,"battery was still on",Active,surface-buoy,,,,,,
+POD-3112,Lifewatch,2018-02-02,2018-03-12,2018-04-02,2018-07-28,bpns-Birkenfels,,3435,,51.6493333,2.5338333,,Active,bottom-mooring,,,,,,
+"SOUNDTRAP ST600HF-7535","Duurzame economische dragers in Vlaamse kustvisserijgemeenschappen post-Brexit",2023-10-04,2023-10-02,,,bpns-Cpower2,,59349,,51.57488,2.987042,"multipurpose echosounder mooring bar",Active,bottom-mooring,,,,,,
+POD-3112,Lifewatch,2018-09-14,2018-09-26,2019-03-27,2019-03-28,bpns-Gardencity,,3926,,51.483333333,2.30515,"acoustic release 547691",Active,bottom-mooring,,,,,,"VR2AR-547691 - 26-09-2018 06:09"
+"B&K NEXUS-1",PhD_Parcerisas,2020-06-02,2020-06-02,,2020-06-02,bpns-Gardencity,,9850,2020-06-02,51.485305,2.324429,,Available,surface-buoy,"1 mV",-180,"\\qarchive\data_sensors\b&k\COVID-19\20200608_SailingTrip\Gardencity",3,192,
+POD-2976,Lifewatch,2021-03-09,2021-03-09,2021-05-10,2021-05-10,bpns-Gardencity,,12119,,51.48611667,2.305183333,"multisensor mooring",Available,bottom-mooring,,,,,,"VR2AR-549590 - 09-03-2021 10:03"
+POD-2422,Lifewatch,2016-08-26,2016-08-30,2016-10-04,2017-03-22,bpns-Lottobuoy,,2590,2017-03-22,51.5666667,2.983333,,Active,surface-buoy,,,,,,
+POD-7104,Lifewatch,2023-02-17,2023-02-23,,2023-06-27,"bpns-Reefballs Belwind",,52357,,51.70466,2.81333,,Available,bottom-mooring,,,,,,"VR2AR-552783 - 22-02-2023 09:02"
+RESEA320-EA-SDA14_2003002,PhD_Parcerisas,2022-12-23,2022-12-20,,2023-06-28,bpns-Faulbaums,,29692,,51.3346,2.6151,"Multipurpose mooring. 2-channel hydrophones. Channel C: GP1190M  130. Continuous. Channel A not working during deck test. 24 bit. Vemco (547697) and and Thelma (2690) simultaneous, activated in October. FPOD (7105) and CPOD (3416).  Coordinates need to be changed to the real ones.",Available,bottom-mooring,,-180,"\\qarchive\data_sensors\rtsys\PhD_Clea\Faulbaums_20221220",,48,"VR2AR-547697 - 20-12-2022 03:12"
+POD-3416,Lifewatch,2019-10-21,2019-10-24,2020-05-04,2020-05-04,bpns-Buitenratel,,6168,,51.24033,2.504733,"Vemco 547694. New battery, new anode, new rope (26m)",Available,bottom-mooring,,,,,,"VR2AR-547694 - 24-10-2019 11:10"
+POD-2750,Lifewatch,2015-09-23,2016-03-10,2016-05-02,2016-05-02,"bpns-Wenduinebank West",2016-06-10,2575,2017-03-21,51.2871667,2.8791667,,Available,surface-buoy,,,,,,
+"SOUNDTRAP HF600-7575",Lifewatch,2023-09-09,2023-09-07,,,bpns-Gardencity,,59065,,51.48648,2.30483,,Active,bottom-mooring,,,"\\qarchive\data_sensors\soundtrap\broadband_acoustic_network\_20230907_Gardencity",,,"VR2AR-549587 - 07-09-2023 01:09"
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2020-04-27,2020-04-27,,2020-04-27,bpns-Renilde,,9932,2020-04-27,51.31056667,2.945183333,,Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\200427 Zeekat\Renilde",3.5,500,
+POD-2421,Lifewatch,2016-12-06,2017-03-10,2017-05-15,2017-06-20,bpns-WK16,2017-06-11,2596,2017-06-23,51.3075,2.909833333,,Available,surface-buoy,,,,,,
+POD-2976,Lifewatch,2017-10-20,2018-01-12,2018-05-29,2018-05-29,bpns-WK9,,3252,,51.4553333333,3.102,"Staalkabel ophanging",Available,surface-buoy,,,,,,
+POD-2953,WinMon.be_CPOD,2018-04-10,2018-05-10,2018-08-22,2018-08-22,"CP A6",,4334,2018-08-23,51.54433,2.894767,"battery active at time of data download",Available,bottom-mooring,,,,,,
+POD-2056,WinMon.be_CPOD,2012-11-14,2012-11-14,2013-03-07,2013-03-07,ODW,,3526,,51.2858333333,2.4386666667,,Available,,,,,,,
+POD-2976,Lifewatch,2017-03-17,2017-03-29,2017-06-20,2017-06-20,"bpns-Middelkerke South",2017-07-01,2624,2017-06-20,51.2455,2.698166667,,Available,surface-buoy,,,,,,
+POD-409,WinMon.be_CPOD,2016-04-24,2016-04-24,2016-08-18,2016-08-18,A6,,3384,,51.5443333333,2.8947666667,,Available,bottom-mooring,,,,,,
+POD-2729,Lifewatch,2019-08-22,2019-08-23,2020-03-19,2020-05-06,bpns-Reefballs-cpower,,5995,,51.580667,2.995167,"receiver 546993, rope to short",Available,bottom-mooring,,,,,,"VR2AR-546893 - 23-08-2019 12:08"
+POD-3152,WinMon.be_CPOD,2019-06-17,2019-07-02,2019-10-16,2019-10-16,"NW CP3",,6324,,51.61385,2.8863667,,Available,bottom-mooring,,,,,,
+POD-3219,Lifewatch,2021-07-09,2021-07-12,2022-01-22,2022-03-18,bpns-Westhinder,,12754,,51.38095,2.452483333,,Available,bottom-mooring,,,,,,"VR2AR-547690 - 12-07-2021 12:07"
+POD-2421,WinMon.be_CPOD,2017-09-21,2017-09-28,2017-12-16,,A6,,3387,,51.54403,2.89487,,Available,bottom-mooring,,,,,,
+"SOUNDTRAP HF600-7560",Lifewatch,2023-07-15,2023-07-14,,,bpns-Grafton,,57128,,51.40666667,2.819,,Active,bottom-mooring,,,"\\qarchive\data_sensors\soundtrap\broadband_acoustic_network\_20230714_Grafton",,48,"VR2AR-546052 - 14-07-2023 12:07"
+POD-3329,Lifewatch,2020-09-07,2020-09-09,2020-09-29,2020-09-29,bpns-Westhinder,,9680,,51.381167,2.452667,"nieuw touw 50m",Available,bottom-mooring,,,,,,"VR2AR-547697 - 09-09-2020 09:09"
+"SOUNDTRAP ST300-5107",Apelafico_acoustics,2022-01-13,2022-01-14,,,bpns-APCpower1,,15852,,51.545713,2.909587,,Available,bottom-mooring,,,,,,"VR2AR-550755 - 14-01-2022 01:01"
+POD-2729,Lifewatch,2016-09-02,2016-09-09,2017-01-28,2017-04-05,bpns-Reefballs-cpower,2016-12-09,2591,,51.58,2.99549,,Available,bottom-mooring,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-06-02,2020-06-02,,2020-06-03,bpns-VG,,9855,2020-06-03,51.389929,2.769902,,Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20200608_SailingTrip\VG",3,192,
+POD-2730,Lifewatch,2020-03-13,2020-05-04,2020-09-09,2020-09-09,bpns-Buitenratel,,9128,,51.24033,2.50466667,"547694, A69_160160158; new rope, new battery, new anode. BATTERY STILL ON, manually stopped at 21/09/2020 09:13 utc",Available,bottom-mooring,,,,,,"VR2AR-547694 - 04-05-2020 12:05"
+POD-2421,Lifewatch,2016-08-22,2016-08-24,2016-10-27,2016-11-29,bpns-LST420,2016-11-24,2588,2017-03-22,51.2575,2.6778333333,,Available,surface-buoy,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-10-13,2020-10-13,2020-10-13,2020-10-13,bpns-Birkenfels,,13241,2020-10-13,51.648269,2.532714,"Sailing campaign. Method: sail-drift",Available,surface-buoy,"1 mV",-180,"\\qarchive\data_sensors\b&k\COVID-19\20201012_SailingTrip\Birkenfels",6,192,
+RESEA320-EA-SDA14_2003002,PhD_Parcerisas,2022-06-24,2022-06-23,2022-07-22,2022-10-17,"bpns-Reefballs Belwind",,26982,,51.70442,2.813167,"1-channel hydrophone. Channel A: GP1190M-LP 134. 24 hours on 24 hours off.",Available,bottom-mooring,,-180,"\\qarchive\data_sensors\rtsys\PhD_Clea\Belwind_20220623",,48,"VR2AR-549588 - 23-06-2022 02:06"
+POD-3401,Lifewatch,2019-10-21,2019-10-24,2020-05-01,2020-05-05,"bpns-Nautica Ena",,6170,,51.30067,2.881417,"Vemco 547698. SD card contained data beyond retrieval date! New battery. 5maart 2020 didn't release due to technical error, retrieved 5may2020, tripod still on the bottom, rope snapped due to springtide and strong currents; had old data on sd, temperature log showed when it flipped to old data. tripod retrieved 31/07 with divers",Available,bottom-mooring,,,,,,"VR2AR-547698 - 24-10-2019 05:10"
+POD-2977,Lifewatch,2021-07-08,2021-07-12,2021-07-12,,bpns-Faulbaums,,12751,,51.3345,2.5149833,"float didn't pop up, it is lost. Frame retrieved by divers",Available,bottom-mooring,,,,,,"VR2AR-549586 - 12-07-2021 09:07"
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-09,2021-06-09,,,bpns-VG,,12646,,51.389929,2.769902,"No big boats close by 
+The drifting is not a straight line but a curve 
+Change of amplitude due to overload
+
+Simultaneously recording with 12675",Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\VG2_3.16",4.5,96,
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2020-04-29,2020-04-29,,2020-04-29,bpns-Lola,,9935,2020-04-29,51.221637,2.742209,,Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\200429 Zeekat\Lola",5,500,
+POD-1611,WinMon.be_CPOD,2016-04-24,2016-04-24,2016-05-27,2016-05-27,"CP DC7",,3382,,51.5520166667,2.9029833333,,Active,bottom-mooring,,,,,,
+POD-3331,Lifewatch,2019-02-20,2019-02-22,2019-06-14,2019-06-14,bpns-Faulbaums,,4657,,51.33435,2.61483333,"acoustic release 547695",Available,bottom-mooring,,,,,,"VR2AR-547695 - 22-02-2019 02:02"
+POD-2730,Lifewatch,2018-06-22,2018-07-22,2018-09-05,2018-09-20,bpns-Birkenfels,,3811,,51.6493333,2.5338333,"lost at 05/09/2018 and found in texel 20/09/2018",Available,bottom-mooring,,,,,,
+RESEA320-EA-SDA14_2003001,PhD_Parcerisas,2021-03-09,2021-03-09,2021-05-19,2021-07-12,bpns-Grafton,,12204,,51.40645,2.8185,"multi-purpose mooring (second version, stainless steel, tube painted, bolts A2)
+1 hydrophone, channel A: 131, continuous recording",Available,bottom-mooring,,-180,"\\qarchive\data_sensors\rtsys\PhD_Clea\Grafton_20210309",,48,"VR2AR-549591 - 09-03-2021 09:03"
+POD-2053,WinMon.be_CPOD,2018-08-24,2018-08-28,2018-12-12,2019-02-14,"BW C9C8D9D8",,4656,2019-02-19,51.64793,2.792217,,Available,bottom-mooring,,,,,,
+POD-2728,Lifewatch,2017-02-14,2017-03-10,2017-03-13,2017-06-21,bpns-Birkenfels,2017-06-10,2600,2017-06-23,51.6493333,2.5338333,"Issue with data: only 3 days recordings",Available,surface-buoy,,,,,,
+POD-409,WinMon.be_CPOD,2015-05-08,2015-05-08,2015-07-15,2018-01-16,bpns-Gootebank,,3372,2018-01-16,51.4481,2.8765,,Available,surface-buoy,,,,,,
+POD-2053,WinMon.be_CPOD,2018-04-10,2018-05-10,2018-08-22,2018-08-22,"CP C7",2018-08-22,4333,2018-08-22,51.552017,2.902983,,Available,bottom-mooring,,,,,,
+POD-3330,Lifewatch,2022-08-05,2022-08-05,2023-09-08,,bpns-Faulbaums,,28148,,51.334617,2.6151,"Multipurpose mooring.LOST",Active,bottom-mooring,,,,,,"VR2AR-547697 - 05-08-2022 08:08"
+RESEA320-EA-SDA14_2003002,PhD_Parcerisas,2023-06-29,2023-06-28,,2023-09-06,bpns-Faulbaums,,57783,,51.3346,2.6151,"Multipurpose mooring. 1-channel hydrophones. Continuous. Channel A 133. 16 bits depth. New cable provided by RTSys on RMA_2023_03_036. Deployed with A-frame. Battery soldered without water detect module",Available,bottom-mooring,,-180,,,48,"VR2AR-549588 - 28-06-2023 02:06"
+POD-3401,Lifewatch,2019-04-10,2019-04-17,2019-08-26,2019-08-26,bpns-G88,,4774,,51.456667,3.06975,,Available,bottom-mooring,,,,,,
+POD-409,Lifewatch,2017-03-08,2017-03-10,2017-08-09,2017-08-09,"bpns-Reefballs Belwind",2017-06-10,2602,2017-08-16,51.704417,2.812594,"Data processing: issues with trains of quality Lo",Available,bottom-mooring,,,,,,
+POD-2729,Lifewatch,2015-09-23,2015-10-06,2016-03-10,2016-07-14,"bpns-Reefballs Belwind",2016-01-06,2578,2017-03-27,51.704417,2.812594,,Available,bottom-mooring,,,,,,
+POD-3401,Lifewatch,2023-07-07,2023-07-13,2023-09-08,2023-09-08,bpns-Buitenratel,,57135,,51.24055,2.504167,"battery still on",Available,bottom-mooring,,,,,,"VR2AR-546895 - 13-07-2023 12:07"
+POD-2420,Lifewatch,2015-09-23,2015-10-01,2015-11-30,2016-03-10,bpns-VG2,2016-01-10,2576,2017-03-21,51.4325,2.802,,Lost,surface-buoy,,,,,,
+POD-7598,Lifewatch,2023-10-19,2023-10-25,,,"bpns-Reefballs belwind",,58692,,51.70398,2.811717674,,Active,bottom-mooring,,,,,,"VR2AR-547656 - 25-10-2023 03:10"
+"B&K NEXUS-1",PhD_Parcerisas,2020-10-12,2020-10-12,2020-10-12,2020-10-12,bpns-Buitenratel,,15805,,51.240167,2.305167,,Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20201012_SailingTrip\Buitenratel_3.16",6,192,
+POD-7599,Lifewatch,2023-09-04,2023-09-07,,,bpns-Gardencity,,58693,,51.48648,2.30483,"SOUNDTRAPST programmed and attached 7575",Active,bottom-mooring,,,,,,"VR2AR-549587 - 07-09-2023 01:09"
+POD-2977,Lifewatch,2020-09-07,2020-09-10,2021-02-24,2021-02-24,"bpns-Reefballs Belwind",,9682,,51.704667,2.813167,,Available,bottom-mooring,,,,,,"VR2AR-546052 - 10-09-2020 10:09"
+POD-2052,WinMon.be_CPOD,2014-05-21,2014-05-21,2014-07-04,,MOW1,,3413,,51.3567,3.1167,,Active,bottom-mooring,,,,,,
+RESEA320-EA-SDA14_2003003,PhD_Parcerisas,2021-03-09,2021-03-09,2021-05-06,2021-05-10,bpns-Gardencity,,12207,,51.48611667,2.305183333,"multi-purpose mooring (second version, stainless steel, tube painted, bolts A2)
+2 hydrophones, channel A:134, channel C: 132, duty cycle 1dayon-1dayoff
+Channel C did not work.",Available,bottom-mooring,,-180,"\\qarchive\data_sensors\rtsys\PhD_Clea\GardenCity_20210309",,96,"VR2AR-549590 - 09-03-2021 10:03"
+POD-408,WinMon.be_CPOD,2014-02-24,2014-02-24,2014-04-03,,bpns-Gootebank,,3418,,51.4481,2.8765,,Active,surface-buoy,,,,,,
+POD-1611,WinMon.be_CPOD,2014-05-06,2014-05-06,2014-06-30,,Gootebank,,3414,,51.4481,2.8765,,Active,surface-buoy,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-09,2021-06-09,,,bpns-WK8,,12645,,51.390805,3.051952,"Far from wreck. Sounds from bumps of the boat and the waves
+9:15 (local time) 2 boats pass by at 1 (atlantic clipper) and 2 (unidentified) miles away. 
+Seems that we saw a seal at minute 27 of thre recording
+Very crowded place. Lots of traffic. 
+9:39 (local time) a ship very close by (silver ray)
+
+Simultaneously recording with 12674",Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\WK8",4.5,96,
+POD-3330,Lifewatch,2020-09-21,2020-09-29,2021-04-14,2021-05-26,bpns-Westhinder,,9940,2021-06-10,51.3811667,2.4527,"error 8 acoustic release, still in water, retrieved beginning of June2021 by divers",Active,bottom-mooring,,,,,,"VR2AR-547698 - 29-09-2020 10:09"
+POD-2728,Lifewatch,2018-05-22,2018-05-29,,,bpns-WK9,,3714,,51.4553333333,3.102,"staalkabel, LOST",Available,surface-buoy,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-06-02,2020-06-02,,2020-06-02,bpns-Grafton,,9852,2020-06-02,51.322378,2.586043,"3 weights on rope hold the hydrophone vertical in the water.",Available,surface-buoy,"1 mV",-180,"\\qarchive\data_sensors\b&k\COVID-19\20200601_SailingTrip\Grafton_1",3,192,
+"B&K NEXUS-1",PhD_Parcerisas,2020-10-12,2020-10-12,2020-10-12,2020-10-12,"bpns-Nautica Ena",,13243,2020-10-12,51.301856,2.880871,"Sailing campaign. Method sail-drift.",Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20201012_SailingTrip\Nautica Ena_3.16",6,192,
+POD-1873,Apelafico_acoustics,2023-06-20,2023-06-28,,2023-09-07,bpns-APGardencity,,57100,,51.48582,2.307382,,Available,bottom-mooring,,,,,,
+POD-2054,WinMon.be_CPOD,2015-11-25,2015-12-07,2016-01-18,,MOW1,,3376,,51.3567,3.1167,,Active,bottom-mooring,,,,,,
+POD-2730,Lifewatch,2018-11-13,2018-11-21,2018-11-21,2019-04-17,bpns-G88,,4247,,51.46078,3.052711,"Geen data op sd kaart",Available,bottom-mooring,,,,,,
+POD-2054,WinMon.be_CPOD,2014-07-04,2014-07-04,2014-10-17,,MOW1,,3410,,51.3566666667,3.1166666667,,Active,bottom-mooring,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-05-04,2020-05-04,,2020-05-04,bpns-Killmore,,9809,2020-05-04,51.226824,2.867658,"File 814: Boat close by during all recording (SS?).
+File 815: Intermitent coupling min 4:00 to 09:10, 10:00 to 10:50. Boat close by all recording (SS?)",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20200504_Simon Stevin\Killmore",6.5,192,
+RESEA320-EA-SDA14_2003002,PhD_Parcerisas,2021-07-13,2021-07-12,2021-08-05,2021-10-26,bpns-Grafton,,12758,,51.40645,2.8185,"multi-purpose mooring (second version, stainless steel, tube already changed to good one, bolts A4)
+1 hydrophone, channel A: 133, duty cycle 1dayon-1dayoff
+Old batteries from birkenfells (only recorded 18 days) in RESEA",Available,bottom-mooring,,-180,"\\qarchive\data_sensors\rtsys\PhD_Clea\Grafton_20210712",,48,"VR2AR-549588 - 12-07-2021 08:07"
+POD-2052,WinMon.be_CPOD,2017-09-21,2017-09-28,2017-12-20,,C8C7D8D7,,3417,,51.65323333,2.79437,,Active,bottom-mooring,,,,,,
+POD-3400,Lifewatch,2023-03-01,2023-03-03,,2023-07-13,bpns-Buitenratel,,53920,,51.24033,2.504,,Available,bottom-mooring,,,,,,"VR2AR-552782 - 03-03-2023 10:03"
+"B&K NEXUS-1",PhD_Parcerisas,2020-06-02,2020-06-02,,2020-06-02,bpns-Grafton,,9851,2020-06-02,51.320191,2.562224,"3 weights on rope hold the hydrophone vertical in the water.",Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20200601_SailingTrip\Grafton_3.16",3,192,
+POD-7040,Lifewatch,2023-06-23,2023-06-28,,2023-09-06,bpns-Faulbaums,,57133,,51.33466,2.615,"mooring clea",Available,bottom-mooring,,,,,,"VR2AR-549588 - 28-06-2023 02:06"
+POD-2421,Lifewatch,2015-09-23,2015-10-26,2015-12-20,2016-08-19,bpns-WK12,2016-01-26,2579,2017-03-23,51.4611667,3.107,,Available,surface-buoy,,,,,,
+POD-3153,WinMon.be_CPOD,2018-05-07,2018-05-09,2018-08-22,2018-08-23,NW_CPOD1,,4031,,51.60823,2.896083,,Available,bottom-mooring,,,,,,
+RESEA320-EA-SDA14_2003004,PhD_Parcerisas,2021-01-25,2021-01-25,,,OP_Cpow_300m,,11796,,51.5459764,2.9399982,"Channel A - hydrophone 132
+Channel C - hydrophone 134
+50m 8mm dyneema rope",Available,bottom-mooring,,,,,,
+POD-7042,Lifewatch,2023-09-25,,,,,,59056,,,,,Active,,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-05-07,2020-05-07,,2020-05-07,bpns-Gardencity,,9817,2020-05-07,51.486606,2.30578,,Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20200507_Simon Stevin\Gardencity_3.16",6.5,192,
+POD-7600,Lifewatch,2023-09-04,2023-09-06,,,bpns-Faulbaums,,58691,,51.33466,2.615,"Multi purpose mooring met soundtraps 7565 & 7654",Active,bottom-mooring,,,,,,"VR2AR-547674 - 06-09-2023 12:09"
+POD-2052,WinMon.be_CPOD,2016-08-14,2016-08-14,2017-02-22,2017-02-22,Nobelwind_Tripod,,3422,,51.6645833333,2.8431666667,,Active,bottom-mooring,,,,,,
+POD-2730,Lifewatch,2021-02-11,2021-02-11,2021-04-05,2021-07-19,bpns-Buitenratel,,11670,,51.24,2.504,"battery cpod still on (August 12 2021), data stopped at 5 april 2021..? receiver also didn't release...",Available,bottom-mooring,,,,,,"VR2AR-549587 - 11-02-2021 10:02"
+POD-1611,WinMon.be_CPOD,2013-08-21,2013-08-21,2013-10-16,2013-10-16,MOW1,,3524,,51.3566666667,3.1166666667,,Active,,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-10-13,2020-10-13,2020-10-13,2020-10-13,bpns-Westhinder,,13246,2020-10-13,51.382996,2.45402,"Sailing campaign. Method: sail-drift",Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20201012_SailingTrip\Westhinder",6,192,
+"SOUNDTRAP STHF300-67416073",Lifewatch,2017-08-09,2017-08-09,2017-09-29,,"bpns-Reefballs Belwind",,9586,,51.704417,2.812594,,Active,bottom-mooring,,-172.8,"\\qarchive\data_sensors\soundtrap\Belwind\najaar2017_reefballs_Belwind",,576,
+POD-7106,Lifewatch,2023-02-17,2023-02-22,,2023-06-28,bpns-Gardencity,,52356,,51.48648,2.30483,,Active,bottom-mooring,,,,,,"VR2AR-546892 - 21-02-2023 05:02"
+"B&K NEXUS-1",PhD_Parcerisas,2020-10-12,2020-10-12,2020-10-12,2020-10-12,bpns-WK8,,15801,,51.390805,3.051952,"Bad recording",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20201012_SailingTrip\WK8_10",6,192,
+POD-2578,Lifewatch,2016-10-05,2016-10-24,2016-12-01,2016-12-01,"bpns-Oostendebank Oost",2017-01-24,2592,,51.2891666667,2.8653333333,,Available,surface-buoy,,,,,,
+POD-3329,Apelafico_acoustics,2022-01-13,2022-01-14,2022-03-18,2022-03-18,bpns-APCpower1,,12868,,51.545713,2.909587,"80kHz pass filter cpod",Available,bottom-mooring,,,,,,"VR2AR-550755 - 14-01-2022 01:01"
+POD-1611,WinMon.be_CPOD,2012-12-05,2012-12-05,2013-03-07,2013-03-07,MOW1,,3527,,51.3566666667,3.1166666667,,Active,,,,,,,
+POD-3218,WinMon.be_CPOD,2019-06-17,2019-07-02,2019-10-17,2019-10-17,"BW B9B8C8C9",2019-10-17,6326,,51.65053,2.7872,,Available,bottom-mooring,,,,,,
+POD-2422,Lifewatch,2018-09-14,2018-09-25,2019-01-29,2019-01-29,"bpns-Nautica Ena",,3928,,51.3,2.86667,"acoustic release 547698, battery was active upon retrieval",Active,bottom-mooring,,,,,,"VR2AR-547698 - 25-09-2018 03:09"
+RESEA320-EA-SDA14_2003001,PhD_Parcerisas,2022-08-20,2022-08-19,2022-10-27,2022-10-27,bpns-Grafton,,28434,2022-10-28,51.40666667,2.819,"Multipurpose mooring
+2-channel hydrophones. Channel A: GP1190M  130, Channel C: GP1190M  133. 24hours on 24 hours off.
+Deployed with A-frame.
+Retreived when still recording, so from 2022-10-27 11:40 to 12:05 we can hear the Simon Stevin on DP and the retrieval process",Available,bottom-mooring,,-180,"\\qarchive\data_sensors\rtsys\PhD_Clea\Grafton_20220819\records",,48,"VR2AR-547693 - 19-08-2022 09:08"
+"SOUNDTRAP ST600HF-7573",Lifewatch,2023-10-04,2023-10-02,,,bpns-Grafton,,59347,,51.40666667,2.819,,Active,bottom-mooring,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-10-12,2020-10-12,2020-10-12,2020-10-12,bpns-Faulbaums,,15806,,51.336373,2.617329,"A bit of engine noise from min 24 to min 43.",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20201012_SailingTrip\Faulbaums_10",6,192,
+POD-3329,Lifewatch,2021-07-02,2021-07-05,2021-09-15,2021-09-15,AP-bpns-Birkenfels,,12741,,51.64833,2.536167,"65m rope multi-purpose mooring",Available,bottom-mooring,,,,,,"VR2AR-550763 - 05-07-2021 12:07"
+POD-3219,Lifewatch,2018-09-21,2018-10-10,2019-02-14,2019-02-14,bpns-Grafton,,4005,,51.406833,2.818167,"acoustic release 547692",Available,bottom-mooring,,,,,,"VR2AR-547692 - 10-10-2018 08:10"
+POD-2055,WinMon.be_CPOD,2013-03-07,2013-03-07,2013-07-13,,ODW,,3510,,51.2858333333,2.4386666667,,Active,,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-07-13,2020-07-13,,2020-07-13,bpns-Grafton,,9826,2020-07-13,51.406383,2.816516,"min 1:45 of the recording MSC and Dutch fishing vessel pass by",Available,surface-buoy,"31.6 mV",-150,"\\qarchive\data_sensors\b&k\COVID-19\20200713_Simon Stevin\Grafton_31.6",5,192,
+POD-3330,Lifewatch,2018-10-08,2018-10-10,2019-02-22,2019-02-22,bpns-Faulbaums,,4006,,51.33435,2.614833,"acoustic release 547693, battery stil on 2019-02-25 13h10",Active,bottom-mooring,,,,,,"VR2AR-547693 - 10-10-2018 09:10"
+POD-7042,Lifewatch,2023-06-23,2023-06-27,,,bpns-Reefballs-cpower,,57129,,51.580667,2.996,,Active,bottom-mooring,,,,,,"VR2AR-552784 - 28-06-2023 03:06"
+POD-3153,WinMon.be_CPOD,2018-08-24,2018-08-28,2018-08-24,,"CP A6",,4690,,51.54433,2.894767,"SD Card came loose during deployment. No deployment data.",Available,bottom-mooring,,,,,,
+POD-1873,Apelafico_acoustics,2022-01-13,2022-01-14,2022-04-24,,bpns-APCpower3,,13366,,51.537104,2.92504,,Available,bottom-mooring,,,,,,"VR2AR-550763 - 14-01-2022 01:01"
+"B&K NEXUS-1",PhD_Parcerisas,2020-05-06,2020-05-06,,2020-05-06,"bpns-Reefballs Belwind",,9814,2020-05-06,51.703926,2.814067,"File 818: Boat min 3:50 to 4:10.
+File 819: Boat min 2:00 to 2:30, 6:30 to 6:50, 11 to 11:20, 13:20 to 13:50, 14:20 to 14:40.
+File 820: Boat min 2:30 to 3:10.",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20200506_Simon Stevin\Reefballs Belwind",6.5,192,
+POD-7045,Lifewatch,2023-06-23,2023-06-28,2023-09-06,2023-09-06,bpns-Westhinder,,57131,,51.380817,2.452667,"receiver 547655 + 7045",Available,bottom-mooring,,,,,,"VR2AR-547655 - 28-06-2023 08:06"
+"B&K NEXUS-1",PhD_Parcerisas,2020-04-29,2020-04-29,,2020-04-29,"bpns-HMS colsay",,9807,2020-04-29,51.24714,2.797171,,Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20200429_Zeekat\HMS Colsay",5,192,
+POD-2730,Lifewatch,2017-10-20,2017-11-21,2017-11-24,2017-11-24,"bpns-Nautica Ena",,3253,,51.30195,2.88113333,"test met acoustic release frame",Available,bottom-mooring,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-06-02,2020-06-02,,2020-06-02,bpns-Westhinder,,9856,2020-06-02,51.379599,2.437761,,Available,surface-buoy,"1 mV",-180,"\\qarchive\data_sensors\b&k\COVID-19\20200608_SailingTrip\Westhinder",3,192,
+POD-3155,WinMon.be_CPOD,2018-08-24,2018-08-28,2019-02-04,2019-02-12,"BW C8C7D8D7",2019-02-04,4661,2019-02-19,51.65323,2.794367,,Available,bottom-mooring,,,,,,
+POD-2730,Lifewatch,2019-05-16,2019-05-21,2019-07-12,2019-07-12,"bpns-Nautica Ena",,4914,,51.3,2.86667,,Available,bottom-mooring,,,,,,"VR2AR-546896 - 21-05-2019 09:05"
+POD-2953,WinMon.be_CPOD,2019-10-10,2019-10-17,2020-02-03,2020-06-25,"NW CP4",,10071,,51.6064,2.877033,,Available,bottom-mooring,,,,,,
+POD-7602,Lifewatch,2023-09-04,2023-09-08,,,bpns-Buitenratel,,58690,,51.24055,2.504167,,Active,bottom-mooring,,,,,,
+POD-2978,Lifewatch,2018-05-23,2018-05-29,2018-11-15,2022-03-24,bpns-WK16,,3713,,51.3075,2.909833333,"staalkabel; teruggevonden in duitsland 2022",Available,surface-buoy,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-09,2021-06-09,,,"bpns-Nautica Ena",,12652,,51.300991,2.8818,"Big bank of jelly fish passing
+Engine still on when the test signal is performed (1 min or so)
+18:00 (local time) bot passes by at 200-300 m
+18:05 (local time) 1 m less on the rope of the B&K and the ST because we hear some sounds that could be related to the weights touching the floor
+Then change of file (946) and even shorter rope (1m depth or similar)
+
+Simultaneously recording with 12678",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\NauticaEna_fullcable",4.5,96,
+POD-3219,Lifewatch,2020-03-03,2020-03-04,2020-07-13,2020-07-13,bpns-Faulbaums,,9103,,51.3345,2.615,"receiver 547695; battery still on",Available,bottom-mooring,,,,,,"VR2AR-547695 - 04-03-2020 12:03"
+"B&K NEXUS-1",PhD_Parcerisas,2020-06-02,2020-06-02,,2020-06-02,bpns-Buitenratel,,9849,2020-06-02,51.193827,2.460398,"2 weights on rope didnt hold the hydrophone vertical in the water, so hydrophone measured the surface sounds",Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20200608_SailingTrip\Buitenratel",1,192,
+POD-1610,WinMon.be_CPOD,2011-03-23,2011-03-23,2011-05-25,,CPN,,3505,,51.5903333333,3.0050833333,,Active,,,,,,,
+POD-2977,Lifewatch,2019-05-23,2019-05-27,2019-08-29,2019-08-29,bpns-Grafton,2020-08-27,5025,,51.406833,2.818167,,Available,bottom-mooring,,,,,,"VR2AR-547694 - 14-02-2019 08:02"
+"SOUNDTRAP ST300-5107",Apelafico_acoustics,2021-06-28,2021-07-05,,2021-09-15,bpns-Birkenfels,,13248,,51.64833,2.536167,,Available,bottom-mooring,,,,,,
+POD-3401,Lifewatch,2021-03-09,2021-03-09,2021-07-12,2021-07-12,bpns-Westhinder,,12121,,51.38095,2.452483333,"needed anchor to retrieve buoy",Available,bottom-mooring,,,,,,"VR2AR-546622 - 09-03-2021 05:03"
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-09,2021-06-09,,,"bpns-Nautica Ena",,12653,,51.300991,2.8818,"Then change of file (946) and even shorter rope (1m depth or similar)
+18:28 (local time) sailing boat passes by
+18:44 boat at 200 m passes
+
+Simultaneously recording with 12678",Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\NauticaEna_shortcable",1.0,96,
+POD-7043,Lifewatch,2023-06-23,2023-06-27,,2023-10-25,"bpns-Reefballs Belwind",,57130,,51.70495,2.91295,,Available,bottom-mooring,,,,,,"VR2AR-547658 - 27-06-2023 03:06"
+POD-7103,Lifewatch,2022-10-17,2022-10-17,2023-02-23,2023-02-23,"bpns-Reefballs Belwind",,29100,,51.70495,2.81295,,Active,bottom-mooring,,,,,,"VR2AR-547691 - 17-10-2022 11:10"
+POD-3330,Lifewatch,2021-07-02,2021-07-05,2021-12-10,,AP_bpns-Grafton,,12739,,51.40645,2.8185,"60m rope multipurpose frame",Active,bottom-mooring,,,,,,"VR2AR-550761 - 05-07-2021 12:07"
+"B&K NEXUS-1",PhD_Parcerisas,2020-06-02,2020-06-02,,2020-06-02,bpns-Birkenfels,,9848,2020-06-02,51.648269,2.532714,,Available,surface-buoy,"1 mV",-180,"\\qarchive\data_sensors\b&k\COVID-19\20200608_SailingTrip\Birkenfels",3,192,
+"B&K NEXUS-1",PhD_Parcerisas,2020-10-12,2020-10-12,2020-10-12,2020-10-12,bpns-Buitenratel,,15804,,51.240167,2.305167,Overload,Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20201012_SailingTrip\Buitenratel_10",6,192,
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2020-05-04,2020-05-04,,2020-05-15,bpns-Westhinder,,9937,2020-05-15,51.382996,2.45402,"Battery case failed",Active,bottom-mooring,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\200505 Tripode\Westhinder",5,500,
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2020-05-04,2020-05-04,2020-05-25,,bpns-Westhinder,,9812,,51.3811667,2.4527,,Active,bottom-mooring,,,"\\qarchive\data_sensors\soundtrap\COVID-19\200505 Tripode\Westhinder",,96,"VR2AR-546622 - 04-05-2020 12:05"
+POD-3154,WinMon.be_CPOD,2019-10-10,2019-10-17,2020-04-22,2020-06-25,"BW B9B8C8C9",,10079,,51.65053,2.7872,,Available,bottom-mooring,,,,,,
+POD-1614,WinMon.be_CPOD,2014-06-30,2014-06-30,2014-10-07,,"bpns-oostdyck west",,3411,,51.2858,2.4387,,Available,surface-buoy,,,,,,
+POD-3219,Lifewatch,2020-09-07,2020-09-10,2021-02-25,2021-02-25,bpns-Reefballs-cpower,,9724,,51.580667,2.996,,Available,bottom-mooring,,,,,,"VR2AR-546622 - 10-09-2020 02:09"
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2021-06-09,2021-06-09,2021-06-09,2021-06-09,"bpns-Nautica Ena",,12678,,51.301856,2.880871,"HF click detector
+Big bank of jelly fish passing
+Engine still on when the test signal is performed (1 min or so)
+18:00 (local time) bot passes by at 200-300 m
+18:05 (local time) 1 m less on the rope of the B&K and the ST because we hear some sounds that could be related to the weights touching the floor
+Then change of file (946) and even shorter rope (1m depth or similar)
+18:28 (local time) sailing boat passes by
+18:44 boat at 200 m passes
+
+Simultaneously recording with 12652, 12653",Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\210609 SailingTrip\Nautica Ena",4.5,96,
+POD-2957,WinMon.be_CPOD,2017-06-10,2017-06-15,2017-09-28,,C9C8D9D8,,3405,,51.64793333,2.79222,,Available,bottom-mooring,,,,,,
+POD-407,WinMon.be_CPOD,2014-04-02,2014-04-02,2014-06-30,,"bpns-oostdyck west",,3415,,51.2858,2.4387,,Active,surface-buoy,,,,,,
+POD-2954,WinMon.be_CPOD,2018-04-10,2018-05-10,2018-08-22,2018-08-22,"CP D7",2018-08-22,4335,2018-08-23,51.55265,2.917917,"Battery functional at time of download",Available,bottom-mooring,,,,,,
+POD-2724,Lifewatch,2015-09-23,2016-03-10,2016-05-13,2016-06-28,bpns-VG2,2016-06-10,2577,2017-03-25,51.4325,2.802,,Active,surface-buoy,,,,,,
+POD-3329,Lifewatch,2018-10-08,2018-10-08,2019-02-08,2019-06-14,"bpns-Reefballs Belwind",,4007,,51.7045,2.813167,"acoustic release 547693",Available,bottom-mooring,,,,,,"VR2AR-547696 - 08-10-2018 06:10"
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-10,2021-06-10,,,bpns-Birkenfels,,12661,,51.648269,2.532714,"Fishing boat close by. 
+Change of amplitude due to overload 
+12:28 (local time) fishing boat leaves
+
+Simultaneously recording with 12683",Available,surface-buoy,3.16,-170,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\Birkenfels_3.16",4.5,96,
+POD-2750,Lifewatch,2016-07-14,2016-07-14,2016-09-09,2016-10-24,"bpns-Reefballs Belwind",2016-10-14,2586,2017-03-21,51.704417,2.812594,"battery exploded",Available,bottom-mooring,,,,,,
+POD-2953,WinMon.be_CPOD,2018-08-24,2018-08-28,2019-02-12,2019-02-12,NW_CPOD2,2019-02-12,4658,2019-02-19,51.63785,2.909617,"Battery still running",Available,bottom-mooring,,,,,,
+"SOUNDTRAP HF600-7565",Lifewatch,2023-11-09,2023-09-06,,,bpns-Faulbaums,,58979,,51.3346,2.6151,"multipurpose mooring. 2 soundtraps in series, so this one starts 2 months after 7564. coordinates to be updated",Active,bottom-mooring,,-175.7,,,48,"VR2AR-547674 - 06-09-2023 12:09"
+POD-407,WinMon.be_CPOD,2010-01-25,2010-01-25,2010-03-24,2010-03-24,MOW1,,3597,,51.3566666667,3.1166666667,,Active,,,,,,,
+RESEA320-EA-SDA14_2003001,PhD_Parcerisas,2022-10-28,2022-10-27,2022-11-08,2023-03-01,bpns-Grafton,,29187,,51.40666,2.819,"battery cable made by Michiel. 
+Multipurpose mooring 
+1-channel hydrophone. Channel A: GP1190M-LP 134. 24 hours on 24 hours off.",Available,bottom-mooring,,-180,"\\qarchive\data_sensors\rtsys\PhD_Clea\Grafton_20221027",,48,"VR2AR-549588 - 27-10-2022 12:10"
+POD-2053,WinMon.be_CPOD,2017-09-26,2017-09-29,2017-12-12,,B9B8C8C9,,3404,,51.6505333333,2.7872,,Available,bottom-mooring,,,,,,
+POD-2422,Lifewatch,2017-06-20,2017-06-20,2017-10-11,2018-01-30,"bpns-Middelkerke South",2017-09-20,2685,,51.2455,2.698166667,"sd card reformatted",Active,surface-buoy,,,,,,
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2021-06-10,2021-06-10,2021-06-10,2021-06-10,bpns-Faulbaums,,12680,,51.336373,2.617329,"HF click detector
+A lot of clacking
+
+Simultaneously recording with 12656, 12657",Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\210609 SailingTrip\Faulbaums",4.5,96,
+"SOUNDTRAP HF600-7564",Lifewatch,2023-09-08,2023-09-06,,,bpns-Faulbaums,,58978,,51.3346,2.6151,"multipurpose mooring. 2 soundtraps in series, so 7565 starts 2 months after. coordinates to be updated",Active,bottom-mooring,,-176,,,48,"VR2AR-547674 - 06-09-2023 12:09"
+RESEA320-EA-SDA14_2003004,PhD_Parcerisas,2022-08-06,2022-08-05,,,bpns-Faulbaums,,28147,,51.3346,2.6151,"Multipurpose mooring
+2-channel hydrophones. Channel A: GP1190M  195, Channel C: GP1190M 196. 24hours on 24 hours off.",Available,bottom-mooring,,-180,,,48,"VR2AR-547697 - 05-08-2022 08:08"
+POD-2053,WinMon.be_CPOD,2014-10-17,2014-10-17,2014-11-18,,MOW1,,3409,,51.3566666667,3.1166666667,,Available,bottom-mooring,,,,,,
+POD-3329,Lifewatch,2022-08-05,2022-08-05,2022-12-05,2023-02-22,bpns-Westhinder,,28158,,51.380917,2.452567,,Available,bottom-mooring,,,,,,"TBR800 RELEASE-2085 - 05-08-2022 09:08"
+"SOUNDTRAP STHF4300-6293",Apelafico_acoustics,2022-01-13,2022-01-14,,,bpns-APCpower2,,15854,,51.541151,2.917682,,Available,bottom-mooring,,,,,,"VR2AR-550762 - 14-01-2022 01:01"
+POD-409,WinMon.be_CPOD,2019-10-10,2019-10-17,2020-01-08,2020-06-25,"NW CP3",,10072,,51.61385,2.8863667,,Available,bottom-mooring,,,,,,
+POD-2957,WinMon.be_CPOD,2018-08-24,2018-08-28,2019-02-11,2019-02-12,"CP C7",2019-02-11,4659,2019-02-19,51.552017,2.902983,,Available,bottom-mooring,,,,,,
+POD-2977,Lifewatch,2020-03-03,2020-03-04,2020-05-10,2020-07-17,"bpns-Nautica Ena",,6171,,51.30067,2.8809,"receiver 547697; horizontal, acoustic release open but didn't pop up; retrieved on 17/07; battery still on (08/08/2020); tripode was horizontal since 10/05/2020 due to fisheries?",Available,bottom-mooring,,,,,,"VR2AR-547697 - 04-03-2020 03:03"
+POD-3416,Lifewatch,2022-12-14,2022-12-20,2023-06-27,2023-06-27,bpns-Faulbaums,,29686,,51.334466,2.615,"put together with fpod",Available,bottom-mooring,,,,,,"VR2AR-547697 - 20-12-2022 03:12"
+POD-2578,Lifewatch,2017-06-16,2017-06-20,2017-08-19,,bpns-Gootebank,2017-09-20,2688,,51.4491666667,2.8786666667,"sd card reformatted after retrieval",Available,surface-buoy,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-06-03,2020-06-03,,2020-06-03,"bpns-Nautica Ena",,9854,2020-06-03,51.300991,2.8818,,Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20200608_SailingTrip\Nautica Ena_10",3,192,
+POD-3112,Lifewatch,2022-10-24,2022-10-27,2023-03-01,2023-03-01,bpns-Grafton,,29140,,51.40667,2.819,"battery still on",Active,bottom-mooring,,,,,,"VR2AR-549588 - 27-10-2022 12:10"
+POD-3416,Lifewatch,2020-09-21,2020-10-01,2020-10-01,2021-02-11,bpns-Faulbaums,,9942,,51.33435,2.61483,"ontplofte battery, bevatte data van andere deployment",Available,bottom-mooring,,,,,,"VR2AR-547697 - 01-10-2020 12:10"
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2020-07-13,2020-07-13,,2020-07-18,bpns-Westhinder,,9581,,51.3811667,2.4527,"Battery case failed",Active,bottom-mooring,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\200713 Tripode\Westhinder",5,500,"VR2AR-546052 - 13-07-2020 09:07"
+POD-3426,WinMon.be_CPOD,2019-06-17,2019-07-02,2019-10-16,2019-10-16,"CP C7",,6331,,51.552017,2.902983,,Available,bottom-mooring,,,,,,
+POD-3605,"PAM Harbour porpoise Borssele, 2019-2024",2022-06-02,2022-06-02,2023-10-02,,MT02,,59093,,51.853458,3.156692,,Active,,,,,,,
+POD-2977,Lifewatch,2017-03-17,2017-03-29,2017-06-20,2017-06-20,bpns-WK9,2017-06-29,2625,,51.4553333333,3.102,"Retrieval: pod FULL of barnacles (inside metal casing as well)",Available,surface-buoy,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-05-08,2020-05-08,,2020-05-08,bpns-G88,,9818,2020-05-08,51.453521,3.068761,,Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20200508_Simon Stevin\G88",6.5,192,
+"SOUNDTRAP ST300-5118",Apelafico_acoustics,2022-01-13,2022-01-14,,,bpns-APCpower3,,15853,,51.537104,2.92504,,Active,bottom-mooring,,,,,,"VR2AR-550763 - 14-01-2022 01:01"
+POD-3401,Lifewatch,2022-10-14,2022-10-14,2023-03-03,2023-03-03,bpns-Buitenratel,,29096,,51.240333,2.504,"battery still on",Available,bottom-mooring,,,,,,"VR2AR-547690 - 14-10-2022 09:10"
+POD-2958,WinMon.be_CPOD,2019-10-10,2019-10-16,,,"CP D7",,10076,,51.55265,2.9179166667,"No valid data - battery stack disconnected",Active,bottom-mooring,,,,,,
+POD-2955,Lifewatch,2018-09-14,2018-09-26,2019-01-28,2019-02-22,bpns-Buitenratel,,3927,,51.240533,2.5032,"acoustic release 547695, battery still on, couldn't stop battery",Available,bottom-mooring,,,,,,"VR2AR-547695 - 26-09-2018 09:09"
+POD-2976,Lifewatch,2022-08-10,2022-08-19,2022-10-27,2022-10-27,bpns-Grafton,,28455,,51.40667,2.819,multipurpose,Available,bottom-mooring,,,,,,"VR2AR-547693 - 19-08-2022 09:08"
+POD-409,WinMon.be_CPOD,2014-04-03,2014-04-03,2014-05-06,,Gootebank,,3419,,51.4481,2.8765,,Available,surface-buoy,,,,,,
+POD-3331,Lifewatch,2020-09-07,2020-09-09,2021-02-13,2021-03-09,bpns-Gardencity,,9681,,51.486167,2.305167,,Available,bottom-mooring,,,,,,"VR2AR-547690 - 07-09-2020 09:09"
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-10,2021-06-10,,,bpns-Birkenfels,,12660,,51.648269,2.532714,"Fishing boat close by. 
+Change of amplitude due to overload 
+12:28 (local time) fishing boat leaves
+
+Simultaneously recording with 12683",Available,surface-buoy,10,-160,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\Birkenfels_10",4.5,96,
+"B&K NEXUS-1",PhD_Parcerisas,2020-04-29,2020-04-29,,2020-04-29,bpns-Lola,,9808,2020-04-29,51.221637,2.742209,"Blank data min 7:00 to end. Battery dead during recording.",Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20200429_Zeekat\Lola",5,192,
+POD-3400,Lifewatch,2022-06-21,2022-06-22,2022-10-23,2023-02-23,bpns-Reefballs-cpower,,26986,2023-02-28,51.580667,2.995167,"contains old data",Available,bottom-mooring,,,,,,"VR2AR-549591 - 22-06-2022 12:06"
+POD-2953,WinMon.be_CPOD,2017-06-10,2017-06-15,2017-09-28,2018-01-09,C7,,3378,2018-01-09,51.5520166667,2.9029833333,,Available,bottom-mooring,,,,,,
+POD-3421,WinMon.be_CPOD,2019-06-17,2019-07-02,2019-10-16,2019-10-16,"CP A6",2019-11-07,6327,,51.54433,2.894767,"Data size odd",Available,bottom-mooring,,,,,,
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2020-04-27,2020-04-27,,2020-04-27,"bpns-Nautica Ena",,9929,2020-04-27,51.3004,2.867783333,,Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\200427 Zeekat\Nautica Ena",5,500,
+POD-407,WinMon.be_CPOD,2012-06-28,2012-06-28,2012-11-14,2012-11-14,ODW,,3523,,51.2858333333,2.4386666667,,Active,,,,,,,
+POD-1878,Apelafico_acoustics,2023-06-20,2023-06-27,,2023-09-05,bpns-APBelwind,,57101,,51.65615,2.79098,,Available,bottom-mooring,,,,,,"VR2AR-550761 - 27-06-2023 06:06"
+POD-3331,Lifewatch,2023-03-24,2023-03-28,,2023-10-23,bpns-CpowerArms,,54614,,51.58,2.9961,,Available,bottom-mooring,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-10-13,2020-10-13,2020-10-13,2020-10-13,bpns-Gardencity,,13242,2020-10-13,51.487251,2.306804,"Sailing campaign. Method sail-drift. Some overload",Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20201012_SailingTrip\Gardencity",6,192,
+POD-3152,WinMon.be_CPOD,2018-08-24,2018-09-19,2018-12-17,,MOW1,,5101,2019-06-17,,,"On a tripod - recovered 15/10 - resubmerged 26/11",Available,bottom-mooring,,,,,,
+POD-2421,Lifewatch,2021-06-14,2021-06-23,2021-09-15,2021-09-15,bpns-Reefballs-cpower,,12642,,51.580667,2.995167,"was send to chelonia for repairment and recalibration in january 2021; when recovered it was not active; has data on it that was from the previous recordings",Available,bottom-mooring,,,,,,"VR2AR-546620 - 23-06-2021 10:06"
+POD-2422,Lifewatch,2020-09-07,2020-09-09,2021-01-20,2021-02-11,bpns-Buitenratel,,9722,,51.240167,2.504,"led light was flashing twice.... must have got a hit or ...?",Active,bottom-mooring,,,,,,"VR2AR-547693 - 09-09-2020 12:09"
+RESEA320-EA-SDA14_2003004,PhD_Parcerisas,2021-03-09,2021-03-09,2021-07-18,2021-09-15,bpns-Faulbaums,,12208,,51.3345,2.615,"multi-purpose mooring (first prototype, galvanized)
+CPOD also in the mooring
+2 hydrophones: channel A: 130, channel C: 136, duty cycle 1dayon-1dayoff
+Channel C working only until 2021-06-11 21:53",Available,bottom-mooring,,-180,"\\qarchive\data_sensors\rtsys\PhD_Clea\Faulbaums_20210309",,48,"VR2AR-547654 - 09-03-2021 05:03"
+POD-2578,Lifewatch,2016-12-06,2016-12-14,2017-03-29,2017-03-29,bpns-WK9,2017-03-14,2597,2017-03-30,51.4553333333,3.102,,Available,surface-buoy,,,,,,
+POD-408,WinMon.be_CPOD,2017-07-07,2017-07-14,2017-10-19,2017-12-15,Rentel,,3362,2017-12-15,51.5854833333,2.93395,,Active,bottom-mooring,,,,,,
+POD-7044,Lifewatch,2023-02-20,2023-02-23,,2023-06-27,bpns-Reefballs-cpower,,52367,,51.580667,2.99601667,"Activation Elisabeth 2023-02-17 12:38
+Re-activation Bram 2023-02-20 08:41",Available,bottom-mooring,,,,,,"VR2AR-547655 - 22-02-2023 04:02"
+POD-2955,Lifewatch,2017-10-20,2018-01-12,2018-05-14,2018-05-14,bpns-WK16,,3251,,51.3075,2.909833333,"ODNATUUR POD",Available,surface-buoy,,,,,,
+RESEA320-EA-SDA14_2003004,PhD_Parcerisas,2022-01-20,2022-01-19,2022-05-23,2022-06-21,bpns-Gardencity,,15811,2022-06-21,51.48645,2.304829,"2-channel hydrophones. Channel A: GP1516M 180, Channel C: GP1516M 193. 24hours on 24 hours off,.",Available,bottom-mooring,,-168,"\\qarchive\data_sensors\rtsys\PhD_Clea\GardenCity_20220119",2,48,"VR2AR-549588 - 19-01-2022 12:01"
+POD-3331,Lifewatch,2018-10-08,2018-10-11,2018-12-30,2019-02-13,bpns-Reefballs-cpower,,4008,,51.58,2.99549,"acoustic release 547696; battery was still active....",Available,bottom-mooring,,,,,,"VR2AR-547694 - 11-10-2018 01:10"
+POD-7603,Lifewatch,2023-09-04,2023-09-05,,,bpns-Reefballs-cpower,,58689,,51.580667,2.996,,Active,bottom-mooring,,,,,,"VR2AR-547697 - 05-09-2023 11:09"
+POD-2977,Lifewatch,2021-03-01,2021-03-09,2021-07-05,2021-07-05,bpns-Birkenfels,,12019,,51.64833333,2.536166667,"multisensor mooring, problems with retrieval, rope to short, needed to use anchor to retrieve buoy.",Available,bottom-mooring,,,,,,"VR2AR-549588 - 09-03-2021 10:03"
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-09,2021-06-09,,,bpns-Buitenratel,,12655,,51.193827,2.460398,"Simultaneously recording with 12679",Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\Buitenratel_3.16",4.5,96,
+POD-3154,WinMon.be_CPOD,2018-08-24,2018-08-28,2019-02-12,2019-02-12,"NW CP1",,4691,2019-02-22,51.60823,2.896083,,Available,bottom-mooring,,,,,,
+POD-2420,Lifewatch,2016-04-19,2016-05-02,2016-06-28,2016-06-28,"bpns-Oostendebank Oost",2016-08-02,2583,2017-03-22,51.2891667,2.8653333,,Lost,surface-buoy,,,,,,
+POD-2725,Lifewatch,2017-03-31,2017-04-05,2017-07-04,2017-07-04,bpns-Reefballs-cpower,2017-07-05,2630,2017-07-05,51.58,2.99549,,Lost,bottom-mooring,,,,,,
+POD-2421,Lifewatch,2018-01-29,2018-03-14,2018-03-14,,"bpns-oostdyck west",,3423,,51.28583333,2.4386666667,"lost and found in gravelines",Available,surface-buoy,,,,,,
+POD-408,WinMon.be_CPOD,2015-07-15,2015-07-15,2015-09-25,,bpns-Gootebank,,3374,,51.4481,2.8765,,Active,surface-buoy,,,,,,
+POD-3155,WinMon.be_CPOD,2018-05-07,2018-05-09,2018-08-22,2018-08-22,B9B8C8C9,2018-08-23,4022,2018-08-23,51.6505333333,2.7872,"Battery operational until the end",Available,bottom-mooring,,,,,,
+POD-2958,WinMon.be_CPOD,2017-06-10,2017-06-15,2017-09-28,2017-12-20,C8C7D8D7,,3380,2017-12-20,51.6532166667,2.7947166667,,Active,bottom-mooring,,,,,,
+POD-3400,Lifewatch,2021-01-14,2021-02-11,2021-03-09,2021-03-09,bpns-Faulbaums,,11736,,51.33435,2.61483,,Available,bottom-mooring,,,,,,
+POD-2054,WinMon.be_CPOD,2015-07-15,2015-07-15,2015-10-21,,MOW1,,3373,,51.3567,3.1167,,Active,bottom-mooring,,,,,,
+POD-2730,Lifewatch,2021-09-15,2021-09-15,2021-09-15,,bpns-Birkenfels,,12795,,51.6483,2.53618,"rope 65m, normal tripod; LOST",Available,bottom-mooring,,,,,,"VR2AR-546622 - 15-09-2021 09:09"
+POD-2957,WinMon.be_CPOD,2018-04-10,2018-05-10,2018-08-22,2018-08-22,"BW C9C8D9D8",2018-08-23,4336,2018-08-23,51.64793,2.792217,"Battery functional until download",Available,bottom-mooring,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-10-12,2020-10-12,2020-10-12,2020-10-12,bpns-VG,,15802,,51.389929,2.769902,"Bad recording",Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20201012_SailingTrip\VG",6,192,
+POD-2730,Lifewatch,2019-08-22,2019-08-29,2020-03-04,2020-03-04,bpns-Grafton,,5993,,51.40646667,2.818966667,"receiver 547695, cpod battery still on",Available,bottom-mooring,,,,,,"VR2AR-546622 - 27-05-2019 01:05"
+POD-2578,Lifewatch,2018-11-13,2018-11-22,2018-11-26,2019-03-28,bpns-Birkenfels,,4246,,51.64933,2.533833,"cpod physical damage, nothing to see on frame, opgevist op 26/11/2018 19h30 en terug overboord gegooid: 20h.",Available,bottom-mooring,,,,,,"VR2AR-546898 - 13-11-2018 10:11"
+POD-3422,WinMon.be_CPOD,2019-06-17,2019-07-02,2019-07-18,2019-10-16,"BW C8C7D8D7",,6328,,51.65323,2.794367,"POD came loose & flipped over on July 18th. It recorded only intermittently later.",Available,bottom-mooring,,,,,,
+POD-407,WinMon.be_CPOD,2011-03-24,2011-03-24,2011-04-29,2011-04-29,ODW,,3674,,51.2858333333,2.4386666667,,Active,,,,,,,
+POD-2978,Lifewatch,2017-06-26,2017-08-09,2018-01-11,,"bpns-Reefballs Belwind",,2760,,51.704417,2.812594,,Available,bottom-mooring,,,,,,
+POD-408,WinMon.be_CPOD,2011-01-31,2011-01-31,2011-03-21,,MOW1,,3503,,51.3566666667,3.1166666667,,Active,,,,,,,
+POD-2724,Lifewatch,2018-05-23,2018-05-30,,,"bpns-Middelkerke South",,3715,,51.2455,2.698166667,lost,Active,surface-buoy,,,,,,
+POD-2728,Lifewatch,2016-06-27,2016-06-27,2016-10-13,2016-11-29,"bpns-oostdyck west",2016-09-29,2585,2017-03-27,51.2858333333,2.4386666667,,Available,surface-buoy,,,,,,
+POD-3112,Lifewatch,2023-10-19,2023-10-23,,,bpns-Armscpower,,59340,,2.9961,2.9961,,Active,bottom-mooring,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-10-12,2020-10-12,2020-10-12,2020-10-12,bpns-Grafton,,15803,,51.406383,2.816516,,Available,surface-buoy,"3.16 mV",-170,"\\qarchive\data_sensors\b&k\COVID-19\20201012_SailingTrip\Grafton",6,192,
+POD-2729,Lifewatch,2018-05-23,2018-05-29,2018-06-05,2018-09-25,bpns-Gootebank,,3712,,51.4491666667,2.8786666667,"battery exploded.",Available,surface-buoy,,,,,,
+POD-3329,Lifewatch,2023-03-16,2023-03-16,2023-06-21,2023-08-10,bpns-Birkenfels,,54560,,51.6483,2.5361833,,Available,bottom-mooring,,,,,,"VR2AR-547695 - 15-03-2023 12:03"
+RESEA320-EA-SDA14_2003001,PhD_Parcerisas,2021-07-13,2021-07-12,2021-07-13,2022-01-19,bpns-Buitenratel,,12759,,51.24033333,2.504,"multi-purpose mooring (second version, stainless steel, tube already changed, bolts A4)
+1 hydrophone, channel A: 131, duty cycle 24h on 24h off.
+Few files working well. Some files are ok but the hydrophone seems to start and stop all the time. Faulty deployment.",Available,bottom-mooring,,-180,"\\qarchive\data_sensors\rtsys\PhD_Clea\Buitenratel_20210712",,48,"VR2AR-547693 - 12-07-2021 02:07"
+POD-2423,Lifewatch,2016-03-17,2016-03-17,,,bpns-D1,2016-06-30,2581,,51.2325,2.6431667,LOST,Lost,surface-buoy,,,,,,
+RESEA320-EA-SDA14_2003003,PhD_Parcerisas,2021-05-11,2021-05-10,2021-06-11,2021-09-15,bpns-Fairplay,,12416,,51.16885,2.616683333,"multi-purpose mooring (second version, stainless steel, tube painted, bolts A2)
+no CPOD in the mooring
+2 hydrophones, channel A:134, channel C: 132, duty cycle 1dayon-1dayoff
+20m depth. 
+Channel C did not work.
+very quiet in some places, needs checking",Available,bottom-mooring,,-180,"\\qarchive\data_sensors\rtsys\PhD_Clea\Fairplay_20210510",,96,"VR2AR-549590 - 10-05-2021 03:05"
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2021-06-09,2021-06-09,2021-06-09,2021-06-09,bpns-Buitenratel,,12679,,51.240754,2.499811,"HF click detector
+Night
+
+Simultaneously recording with 12654, 12655",Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\210609 SailingTrip\Buitenratel",4.5,96,
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2021-06-10,2021-06-10,2021-06-10,2021-06-10,bpns-Westhinder,,12681,,51.38095,2.452483333,"HF click detector
+
+Simultaneously recording with 12658",Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\210609 SailingTrip\Westhinder",4.5,96,
+POD-2978,Lifewatch,2022-12-17,2022-12-21,2023-06-13,2023-06-28,bpns-Westhinder,,29685,,51.381166,2.4525,,Available,bottom-mooring,,,,,,"VR2AR-549590 - 21-12-2022 11:12"
+POD-2422,Lifewatch,2017-02-15,2017-03-10,2017-06-20,2017-06-20,bpns-Gootebank,2017-06-10,2622,2017-06-20,51.4491666667,2.8786666667,,Active,surface-buoy,,,,,,
+POD-7106,Lifewatch,2023-08-07,2023-08-10,,,bpns-Birkenfels,,58579,,51.6483,2.5361833,,Active,bottom-mooring,,,,,,"VR2AR-547693 - 10-08-2023 12:08"
+"B&K NEXUS-1",PhD_Parcerisas,2021-06-10,2021-06-10,,,bpns-Faulbaums,,12656,,51.3345,2.514983,"Night
+A lot of clacking, then overload and change of sensitivity.
+
+Simultaneously recording with 12680",Available,surface-buoy,10,-160,"\\qarchive\data_sensors\b&k\COVID-19\20210609_SailingTrip\Faulbaums_10",4.5,96,
+"SOUNDTRAP ST600HF-7534","Duurzame economische dragers in Vlaamse kustvisserijgemeenschappen post-Brexit",2023-10-27,2023-10-25,,,bpns-Westhinder,,59348,,51.381187,2.45292833,"multi-purpose mooring with echosounders; continuous: recording every 5min for 5 min; pelfish-Westhinder	51.38118697	2.452927617	N51° 22.8712'	E2°27.1757'			
+hf clicks stored, soundtrap on the echosounder mooring; echosounder on until battery is flat (january 2024)",Active,bottom-mooring,,,,,,"VR2AR-553679 - 25-10-2023 12:10"
+POD-7105,Lifewatch,2022-12-16,2022-12-20,,2023-07-27,bpns-Faulbaums,,29688,,51.334466,2.615,"samen met cpod uitgezet om verschil in detectie waar te nemen.",Available,bottom-mooring,,,,,,"VR2AR-547697 - 20-12-2022 03:12"
+POD-2976,Lifewatch,2018-06-22,2018-06-28,2018-11-28,2019-01-29,bpns-Reefballs-cpower,2018-11-28,3810,,51.58,2.99549,"sd card contained after cpower data old data, comparison of millisecs,",Available,bottom-mooring,,,,,,
+POD-2724,Lifewatch,2016-12-21,2016-12-22,2017-04-05,2017-04-05,bpns-Reefballs-cpower,2017-03-22,2599,,51.58,2.99549,,Active,bottom-mooring,,,,,,
+POD-2954,WinMon.be_CPOD,2019-10-10,2019-10-16,2020-04-29,2020-06-25,"CP A6",,10078,,51.54433,2.894767,,Available,bottom-mooring,,,,,,
+POD-7103,Lifewatch,2023-03-01,2023-03-01,,2023-07-14,bpns-Grafton,,52572,,51.40667,2.819,"MULTIPURPOSE MOORING",Active,bottom-mooring,,,,,,"VR2AR-547693 - 01-03-2023 09:03"
+POD-409,WinMon.be_CPOD,2017-09-20,2017-09-27,2017-12-19,2018-01-09,C7,,3389,,51.5520166667,2.9029833333,,Available,bottom-mooring,,,,,,
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2020-04-29,2020-04-29,,2020-04-29,"bpns-Heinkel 111",,9933,2020-04-29,51.222237,2.86342,,Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\200429 Zeekat\Heinkel 111",5,500,
+POD-2578,WinMon.be_CPOD,2016-04-23,2016-04-23,2016-08-17,2016-08-17,D7,,3390,,51.55265,2.9179166667,,Available,bottom-mooring,,,,,,
+POD-2958,WinMon.be_CPOD,2018-08-24,2018-08-28,2019-02-10,2019-02-12,"CP D7",2019-02-12,4660,2019-02-19,51.55265,2.917917,"dummy date op to april 2nd (bug)",Active,bottom-mooring,,,,,,
+POD-2422,Apelafico_acoustics,2023-06-20,2023-06-27,2023-09-05,2023-09-05,bpns-APCpower-2,,57102,,51.57488,2.987042,,Active,bottom-mooring,,,,,,"VR2AR-550755 - 27-06-2023 12:06"
+RESEA320-EA-SDA14_2003003,PhD_Parcerisas,2022-06-22,2022-06-21,2022-07-01,2023-02-21,bpns-Gardencity,,26981,,51.48645,2.304829,"1-channel hydrophone. Channel A: GP1190M-LP 132. 24hours on 24 hours off,.",Available,bottom-mooring,,-180,"\\qarchive\data_sensors\rtsys\PhD_Clea\Gardencity_20220621",,48,"VR2AR-549587 - 21-06-2022 08:06"
+POD-409,WinMon.be_CPOD,2012-02-29,2012-02-29,2012-04-04,,ODW,,3509,,51.2858333333,2.4386666667,,Available,,,,,,,
+"SOUNDTRAP HF600-6714",Apelafico_acoustics,2022-01-10,2022-01-14,,,bpns-APCpower4,,13384,,51.532983,2.933061,,Available,bottom-mooring,,,,,,"VR2AR-550761 - 14-01-2022 01:01"
+POD-1614,WinMon.be_CPOD,2015-04-13,2015-04-13,2015-06-25,2018-01-09,"bpns-oostdyck west",,3369,,51.2858,2.4387,,Available,surface-buoy,,,,,,
+"SOUNDTRAP ST300-5118",Apelafico_acoustics,2022-08-11,2022-08-11,,,HKZ-1,,54174,,,,,Active,bottom-mooring,,,,,,"VR2AR-550761 - 11-08-2022 02:08"
+POD-3112,Lifewatch,2023-07-07,2023-07-14,2023-10-02,2023-10-02,bpns-Grafton,,57134,,51.40666667,2.819,"battery still on",Active,bottom-mooring,,,,,,"VR2AR-546052 - 14-07-2023 12:07"
+POD-2421,Lifewatch,2018-09-14,2018-09-26,2019-02-26,2019-03-28,bpns-Westhinder,2019-02-26,3929,,51.38,2.45,"acoustic release 547697",Available,bottom-mooring,,,,,,"VR2AR-547697 - 26-09-2018 08:09"
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2021-06-10,2021-06-10,2021-06-10,2021-06-10,bpns-Gardencity,,12682,,51.487251,2.306804,"HF click detector
+Capoeira (boat where we are) turns on instrumentation after 5 mintues (close to TSS and not safe without instrumentation on!)
+Start far away from the wreck because the current pushes us towards the  wreck
+
+Simultaneously recording with 12659",Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\210609 SailingTrip\Garden City",4.5,96,
+POD-2751,Lifewatch,2015-09-23,2015-09-23,,,"bpns-Wenduinebank West",2015-12-23,2627,,51.2871667,2.8791667,LOST,Lost,surface-buoy,,,,,,
+POD-3155,WinMon.be_CPOD,2021-03-25,2021-03-30,2021-06-23,2021-06-23,"Belwind Tripod",,13362,2021-12-24,51.68,2.81,,Available,bottom-mooring,,,,,,
+"B&K NEXUS-1",PhD_Parcerisas,2020-05-08,2020-05-08,,2020-05-08,bpns-Loreley,,9819,2020-05-08,51.297016,2.910482,,Available,surface-buoy,"10 mV",-160,"\\qarchive\data_sensors\b&k\COVID-19\20200508_Simon Stevin\Loreley_10",4.5,192,
+POD-1611,WinMon.be_CPOD,2017-09-21,2017-09-28,2017-12-11,,C9C8D9D8,,3363,,51.64793333,2.79222,,Active,bottom-mooring,,,,,,
+POD-2726,Lifewatch,2016-06-27,2016-07-13,2016-07-13,,bpns-Birkenfels,2016-10-13,2582,,51.6493333,2.5338333,LOST,Lost,surface-buoy,,,,,,
+POD-2422,Lifewatch,2022-01-04,2022-01-19,2022-06-02,2022-06-02,bpns-Buitenratel,,12882,,51.2403,2.504,,Active,bottom-mooring,,,,,,"VR2AR-549591 - 19-01-2022 10:01"
+POD-2955,Lifewatch,2019-08-23,2019-08-26,,,bpns-G88,,5994,,,,"lost under sediment buriel; VR2AR-547690",Available,bottom-mooring,,,,,,
+POD-2054,WinMon.be_CPOD,2015-01-20,2015-01-27,2016-03-16,2018-01-10,MOW1,,3367,2018-01-10,51.3567,3.1167,,Active,bottom-mooring,,,,,,
+POD-409,WinMon.be_CPOD,2013-04-24,2013-04-24,2013-07-02,,CPN,,3513,,51.5903333333,3.0050833333,,Available,,,,,,,
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2021-06-09,2021-06-09,2021-06-09,2021-06-09,bpns-Grafton,,12676,,51.406383,2.816516,"HF click detector
+Boat all the time around trawling. 13:41 (local time) takes out the net
+
+Simultaneously recording with 12650",Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\210609 SailingTrip\Grafton",4.5,96,
+POD-2955,Lifewatch,2019-03-25,2019-03-28,2019-06-25,2019-07-08,bpns-Westhinder,,4761,,51.381283,2.4523,"Didn't surface when release was activated (25/06/2019). Fished up later (8/7/2019).",Available,bottom-mooring,,,,,,"VR2AR-547697 - 28-03-2019 01:03"
+POD-2421,Lifewatch,2022-03-15,2022-03-18,2022-05-25,2022-06-22,bpns-Reefballs-cpower,,25706,,51.580667,2.995167,"wrong settings by Chelonia",Available,bottom-mooring,,,,,,"VR2AR-549590 - 18-03-2022 11:03"
+POD-408,WinMon.be_CPOD,2011-04-29,2011-04-29,2011-05-23,,ODW,,3506,,51.2858333333,2.4386666667,,Active,,,,,,,
+POD-2421,Lifewatch,2014-07-16,2014-07-17,2014-09-19,2014-09-22,"bpns-Belwind C05",2014-10-17,2623,2017-03-31,51.669075,2.8019683,,Available,surface-buoy,,,,,,
+POD-3330,Lifewatch,2020-07-10,2020-07-13,2020-09-09,2020-09-09,bpns-Westhinder,,9572,,51.3811667,2.4527,"546052; battery still on after retrieval (stopped at 21/09/2020 08h45utc",Active,bottom-mooring,,,,,,"VR2AR-546052 - 13-07-2020 09:07"
+POD-3416,Lifewatch,2021-02-22,2021-02-24,2021-06-03,2021-06-03,"bpns-Reefballs Belwind",,11956,,51.704667,2.8136167,,Available,bottom-mooring,,,,,,"VR2AR-547697 - 24-02-2021 03:02"
+POD-3424,WinMon.be_CPOD,2019-06-17,2019-07-02,,,"CP D7",,6329,,,,"POD stopped six days after activation. Cause uncertain - likely battery stack got disrupted.",Active,,,,,,,
+POD-3155,WinMon.be_CPOD,2019-10-10,2019-10-17,2020-05-04,2020-06-25,"NW CP1",,10073,,51.60823,2.896083,,Available,bottom-mooring,,,,,,
+POD-2729,Lifewatch,2022-01-17,2022-01-18,2022-01-18,,bpns-Grafton,,15809,,51.40645,2.8185,"multipurpose; bevat enkel oude data",Available,bottom-mooring,,,,,,"VR2AR-549587 - 18-01-2022 11:01"
+POD-3112,Lifewatch,2021-09-15,2021-09-15,2022-02-22,2022-03-18,bpns-Reefballs-cpower,,12816,,51.580667,2.995167,"tripod, long rope 50m",Active,bottom-mooring,,,,,,"VR2AR-546891 - 15-09-2021 11:09"
+POD-2052,WinMon.be_CPOD,2018-08-24,2018-08-28,2019-01-10,2019-02-14,"BW B9B8C8C9",,4655,2019-02-19,51.65053,2.7872,,Active,bottom-mooring,,,,,,
+POD-2052,WinMon.be_CPOD,2015-03-16,2015-03-16,2015-04-13,2018-01-10,MOW1,,3368,2018-01-10,51.3567,3.1167,,Active,bottom-mooring,,,,,,
+RESEA320-EA-SDA14_2003002,PhD_Parcerisas,2021-03-09,2021-03-09,2021-03-27,2021-07-05,bpns-Birkenfels,,12206,,51.64833333,2.536166667,"multi-purpose mooring (second version, stainless steel, tube painted, bolts A2)
+1 hydrophone, channel A: 133, continuous recording",Available,bottom-mooring,,-180,"\\qarchive\data_sensors\rtsys\PhD_Clea\Birkenfels_20210309",,96,"VR2AR-549588 - 09-03-2021 10:03"
+"SOUNDTRAP STHF300-67416073",PhD_Parcerisas,2020-04-29,2020-04-29,,2020-04-29,"bpns-HMS colsay",,9934,2020-04-29,51.24714,2.797171,,Active,surface-buoy,,-172.8,"\\qarchive\data_sensors\soundtrap\COVID-19\200429 Zeekat\HMS Colsay",5,500,
+POD-2725,Lifewatch,2016-11-21,2016-11-29,2017-02-21,2017-03-29,bpns-LST420,2017-03-01,2555,2017-03-31,51.2575,2.6778333333,,Lost,surface-buoy,,,,,,
+POD-3219,Apelafico_acoustics,2023-03-06,2023-05-07,2023-06-16,,dpns-Borssele2,,53925,,51.705,3.240733,,Available,bottom-mooring,,,,,,
+POD-2957,WinMon.be_CPOD,2019-10-10,2019-10-16,2020-05-05,2020-06-25,"CP C7",,10077,,51.552017,2.902983,,Available,bottom-mooring,,,,,,
+POD-3400,Lifewatch,2019-03-25,2019-03-28,2019-07-22,2020-06-17,bpns-Birkenfels,,4762,,51.64816667,2.53583333,"VR2AR 546898",Available,bottom-mooring,,,,,,"VR2AR-546898 - 28-03-2019 07:03"
+POD-2750,Lifewatch,2016-12-06,2016-12-09,,,"bpns-Oostendebank Oost",2017-03-06,2598,,51.2891666667,2.8653333333,LOST,Available,surface-buoy,,,,,,
+POD-2422,Lifewatch,2021-06-28,2021-07-05,2021-09-17,2021-09-21,AP-bpns-Belwind,,12736,,51.65615,2.79098,"60m rope multipurpose mooring",Active,bottom-mooring,,,,,,"VR2AR-550762 - 05-07-2021 12:07"
+POD-2053,WinMon.be_CPOD,2015-05-08,2015-05-08,2015-06-22,2018-01-16,MOW1,,3371,2018-01-16,51.3567,3.1167,,Available,bottom-mooring,,,,,,
