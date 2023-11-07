@@ -12,14 +12,14 @@
     "properties": {
         "expression": "all_deployments_from2019",
         "caption": "all_deployments_from2019",
-        "totalObservations": 36229,
-        "displayedObservations": 36229,
-        "variables": 38,
-        "cacheKey": "FE70C3D3",
+        "totalObservations": "36226",
+        "displayedObservations": "36226",
+        "variables": "39",
+        "cacheKey": "A85F09DC",
         "object": "all_deployments_from2019",
         "environment": "",
-        "contentUrl": "grid_resource/gridviewer.html?env=&obj=all_deployments_from2019&cache_key=FE70C3D3&max_cols=50",
-        "preview": 0
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=all_deployments_from2019&cache_key=A85F09DC&max_cols=50",
+        "preview": "0"
     },
     "folds": "",
     "lastKnownWriteTime": 7376741658561703289,

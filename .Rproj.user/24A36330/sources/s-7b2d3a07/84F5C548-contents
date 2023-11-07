@@ -69,10 +69,22 @@ lost_receivers <-
     dplyr::filter(owner_organization == "VLIZ")
 
 # acoustic deployments
-all_deployments_from2019 <- 
+all_deployments <- 
   etn::get_acoustic_deployments(con) %>%
-  
+  dplyr::filter(!is.na(deploy_longitude) & !is.na(deploy_latitude)) %>%
+  sf::st_as_sf(., coords = c("deploy_longitude", "deploy_latitude"), crs = 4326)
 
+# location = st_as_sf(all_deployments_BPNS, coords = c("deploy_longitude", "deploy_latitude"), crs = 4326)
+
+within_BPNS <- sf::st_within(all_deployments, BPNS) %>% # get back list with TRUE or FALSE is deployment location is within BPNS boundaries
+  apply(., 1, any)
+
+deployments_BPNS <- all_deployments %>%
+  dplyr::mutate(within_BPNS = within_BPNS) %>%
+  dplyr::filter(within_BPNS == TRUE)
+
+rm(all_deployments)
+  
 ```
 
 <!-- Overview: Receiver stations --> 
@@ -87,18 +99,28 @@ Row {data-height=800}
 #, include=T, echo=F
 
 # EMODnet Bathymetry layer
-# emodnet_tiles <-"https://tiles.emodnet-bathymetry.eu/2020/baselayer/web_mercator/{z}/{x}/{y}.png"
-# cite_emodnet <- "<a href='https://emodnet.ec.europa.eu'>EMODnet</a>"
-# attr(cite_emodnet, "class") <- c("html", "character")
-# 
-# # special icons
-# # a single icon is declared
-# icon_tag <- leaflet::makeAwesomeIcon(
-#   icon = "tag",
-#   iconColor = "black",
-#   markerColor = "yellow",
-#   library = "fa"
-# )
+emodnet_tiles <-"https://tiles.emodnet-bathymetry.eu/2020/baselayer/web_mercator/{z}/{x}/{y}.png"
+cite_emodnet <- "<a href='https://emodnet.ec.europa.eu'>EMODnet</a>"
+attr(cite_emodnet, "class") <- c("html", "character")
+
+# special icons
+icon_tag <- leaflet::makeAwesomeIcon(
+  icon = "tag",
+  iconColor = "black",
+  markerColor = "yellow",
+  library = "fa"
+)
+
+# first map test
+
+leaflet() %>%
+  leaflet::addTiles(urlTemplate = emodnet_tiles,
+                    # options = leaflet::tileOptions(tms = FALSE),
+                    attribution = cite_emodnet,
+                    group = "EMODnet bathymetry") %>%
+  addCircleMarkers(data = all_deployments_from2019,
+                   lat = ~deploy_latitude,
+                   lng = ~deploy_longitude)
 
 # colour palettes
 # col_fun <- scico::scico(n = stations$deploy_latitude %>% unique() %>% length(),

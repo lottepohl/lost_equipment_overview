@@ -3,15 +3,15 @@
     "path": "~/lost_equipment_overview/index.Rmd",
     "project_path": "index.Rmd",
     "type": "r_markdown",
-    "hash": "1546632836",
+    "hash": "0",
     "contents": "",
-    "dirty": false,
+    "dirty": true,
     "created": 1699347132313.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
         "chunk_output_type": "console",
-        "cursorPosition": "47,0",
+        "cursorPosition": "27,0",
         "scrollLine": "19"
     },
     "folds": "",
@@ -19,7 +19,7 @@
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1699348962869,
+    "last_content_update": 1699350352587,
     "read_only": false,
     "read_only_alternatives": []
 }
