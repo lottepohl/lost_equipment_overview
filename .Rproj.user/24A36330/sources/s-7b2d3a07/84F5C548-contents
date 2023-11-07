@@ -1,0 +1,248 @@
+---
+title: "VLIZ lost equipment in the BPNS"
+output:
+  flexdashboard::flex_dashboard:
+    source_code: embed
+    orientation: rows
+    vertical_layout: scroll
+    theme: 
+      version: 4
+      bootswatch: litera
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- README: -->
+<!-- * This script produces an R flexdashboard showing overview maps and tables about lost equipment in the Belgian Part of the North Sea (BPNS), that is, acoustic receivers, CPODs, soundtraps and hydrophones. -->
+<!-- * To retrieve metadata on acoustic receivers (that are part of the European Tracking Network ETN), the 'etn' R package is used. -->
+<!-- * Metadata on the remaining hydroacoustic equipment is not programmatically retrievable at the time of writing (November, 2023) and will thus be loaded from a .csv file. -->
+<!-- * Author: Lotte Pohl, Date: 2023-11-07, E-Mail: lotte.pohl at gmail.com -->
+
+```{r setup, include=FALSE, echo = F}
+
+# knitr::opts_chunk$set(echo = F)
+# Sys.setlocale("LC_TIME", "English") # language = English, does not work right now
+
+# fundamentals
+library(flexdashboard)
+library(etn)
+library(knitr)
+
+# data wrangling
+library(readr)
+# library(tidyverse)
+library(lubridate)
+library(dplyr)
+library(lubridate)
+library(utils)
+library(forcats)
+
+# maps
+library(leaflet)
+library(leafem)
+
+# spatial operations & tools
+library(mregions2)
+library(sf)
+
+# plotting and tables
+library(DT) # for interactive tables
+library(ggplot2)
+library(kableExtra)
+library(plotly)
+library(scico) #colour palettes
+
+# database connection
+con <- etn::connect_to_etn(Sys.getenv("userid"), Sys.getenv("pwd"))
+
+# retrieve spatial objects
+BPNS <- mregions2::gaz_search(3293) %>% mregions2::gaz_geometry() # Belgian EEZ
+```
+
+
+```{r ETN database query, include=FALSE, echo=FALSE}
+# in this code chunk, metadata on the lost and broken acoustic receivers, and acoustic deployment data are retrieved
+
+# acoustic receivers
+lost_receivers <- 
+  etn::get_acoustic_receivers(con, status = c("lost", "broken")) %>%
+    dplyr::filter(owner_organization == "VLIZ")
+
+# acoustic deployments
+all_deployments_from2019 <- 
+  etn::get_acoustic_deployments(con) %>%
+  
+
+```
+
+<!-- Overview: Receiver stations --> 
+<!-- ===================================== -->
+
+Row {data-height=800}
+-------------------------------------
+    
+### Map with receivers that detected S. acanthias {data-width=700}
+    
+```{r map}
+#, include=T, echo=F
+
+# EMODnet Bathymetry layer
+# emodnet_tiles <-"https://tiles.emodnet-bathymetry.eu/2020/baselayer/web_mercator/{z}/{x}/{y}.png"
+# cite_emodnet <- "<a href='https://emodnet.ec.europa.eu'>EMODnet</a>"
+# attr(cite_emodnet, "class") <- c("html", "character")
+# 
+# # special icons
+# # a single icon is declared
+# icon_tag <- leaflet::makeAwesomeIcon(
+#   icon = "tag",
+#   iconColor = "black",
+#   markerColor = "yellow",
+#   library = "fa"
+# )
+
+# colour palettes
+# col_fun <- scico::scico(n = stations$deploy_latitude %>% unique() %>% length(),
+#                         palette = "roma")
+# pal <- leaflet::colorFactor(col_fun, domain = stations$deploy_latitude)
+# qpal <- colorQuantile(col_fun, domain = stations$deploy_latitude, n = 5)
+# palette_latitudes_df <- tibble(deploy_latitude = stations$deploy_latitude, color = pal(stations$deploy_latitude))
+# 
+# 
+# legend_latitudes <- stations %>% 
+#   dplyr::mutate(bin_n5 = deploy_latitude %>% dplyr::ntile(n = 5)) %>%
+#   dplyr::group_by(bin_n5) %>%
+#   dplyr::summarise(min = deploy_latitude %>% min(),
+#                    max = deploy_latitude %>% max()) %>%
+#   dplyr::mutate(color = qpal(stations$deploy_latitude) %>% unique())
+# 
+# leaflet() %>% 
+#   
+# #background
+#   # addTiles() %>%
+#   addProviderTiles("Esri.WorldImagery", options = providerTileOptions(opacity = 0.6), group = "satellite") %>%
+#   leaflet::addTiles(urlTemplate = emodnet_tiles,
+#                     # options = leaflet::tileOptions(tms = FALSE),
+#                     attribution = cite_emodnet,
+#                     group = "EMODnet bathymetry") %>%
+#   # addRasterImage(bathy_belgium_raster, opacity = 1, colors = "Spectral", group = "bathymetry") %>%
+#   # addPolygons(data = coastline_BE_poly, opacity = 1, fillColor = "grey", weight = 0, fillOpacity = 0.7, group = "bathymetry") %>% #"#ECE4BF"
+#   addTiles(group = "OpenStreetMap") %>%
+# 
+# #data: receiver stations
+#   addCircleMarkers(data = stations,
+#                    # clusterOptions = markerClusterOptions(showCoverageOnHover = F, zoomToBoundsOnClick = T, freezeAtZoom = 7),
+#                    lat = ~deploy_latitude,
+#                    lng = ~deploy_longitude,
+#                    radius = 5,
+#                    color = "black",
+#                    weight = 1,
+#                    fillOpacity = 1,
+#                    fillColor = ~pal(deploy_latitude),
+#                    opacity = 1,
+#                    label = ~paste0("station ", station_name),
+#                    popup = ~paste0("lat: ", deploy_latitude, ", lon: ", deploy_longitude),
+#                    group = "receiver stations"
+#                    ) %>%
+#   
+# #data: tagging locations
+#   addAwesomeMarkers(data = tagging_locations,
+#                    icon = icon_tag,
+#                    clusterOptions = markerClusterOptions(), #showCoverageOnHover = T, zoomToBoundsOnClick = T, 
+#                    lat = ~releaseLatitude,
+#                    lng = ~releaseLongitude,
+#                    # radius = 5,
+#                    # fillOpacity = 0.7,
+#                    # fillColor = "yellow",
+#                    # opacity = 0,
+#                    label = ~paste0("name: ", tagging_location),
+#                    popup = ~paste0("lat: ", releaseLatitude, ", lon: ", releaseLongitude, ", #sharks tagged: ", ind_tagged),
+#                    group = "tagging locations"
+#                    ) %>%
+# 
+# # add-ons
+# leaflet.extras::addFullscreenControl() %>%
+#   leafem::addMouseCoordinates() %>%
+#   addScaleBar(position = "bottomright",
+#               options = scaleBarOptions(
+#                 maxWidth = 150,
+#               imperial = FALSE)) %>%
+#   
+# # layers control
+#   addLayersControl(position = "topright" ,
+#                    baseGroups = c("EMODnet bathymetry", "satellite", "OpenStreetMap"),
+#                    overlayGroups = c("receiver stations", "tagging locations"),
+#                    options = layersControlOptions(collapsed = FALSE)) %>%
+#   hideGroup("tagging locations") %>%
+#   
+# # legend
+#   addLegend(position = "bottomleft",
+#             colors = legend_latitudes$color %>% rev(),
+#             labels = paste0(legend_latitudes$min %>% round(), " - ", legend_latitudes$max %>% round()) %>% rev(),
+#             opacity = 1,
+#             title = "Latitude")
+
+# MWE
+
+# leaflet() %>%
+#   addTiles() %>%
+#   addCircleMarkers(data = stations,
+#                    lat = ~deploy_latitude,
+#                    lng = ~deploy_longitude,
+#                    color = ~pal2(deploy_latitude)) %>%
+#   addLegend(position = "bottomleft",
+#             colors = legend_latitudes$color,
+#             labels = paste0(legend_latitudes$min %>% round(), " - ", legend_latitudes$max %>% round()),
+#             opacity = 1,
+#             title = "Latitude")
+
+```
+  
+<!-- > Map with receiver deployments and acoustic detections. -->
+ 
+    
+### side row {data-width=300}
+    
+```{r abacus}
+
+
+```
+
+
+
+Row {data-height=1000}
+-------------------------------------
+
+
+### Table 
+
+```{r table}
+
+# DT::datatable(animals %>%
+#                 dplyr::select(idPk, catchedDateTime, tagging_location, utcReleaseDateTime, sex, tag, releaseLatitude, releaseLongitude),
+#               rownames = F,
+#               filter = 'bottom',
+#               extension = 'Buttons',options = list(
+#                 dom = 'Bfrtip',
+#                 buttons = c('pdf', 'csv', 'excel', 'print','copy'),
+#                 columnDefs = list(list(className = 'dt-center', targets = '_all'))
+#               )
+#             )
+#           
+          # ))
+          #     options = list(pageLength = 10, autoWidth = TRUE, columnDefs = list(list(className = 'dt-center', targets = '_all')))
+          #     ) 
+
+# %>%
+#   formatStyle(
+#   c('receiver_id', 'battery_estimated_end_date'),
+#   fontWeight = "bold") %>%
+#   formatStyle(
+#   'needs_battery_change',
+#   backgroundColor = styleEqual(c(0, 1), c('#90BF87', '#F9938E')))
+
+```
+
+
+<!-- Details: Acoustic Projects & Detections -->
+<!-- ===================================== -->
+
