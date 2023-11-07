@@ -41,7 +41,7 @@ library(lubridate)
 library(dplyr)
 library(lubridate)
 library(utils)
-library(forcats)
+library(purrr)
 
 # maps
 library(leaflet)
@@ -50,6 +50,8 @@ library(leafem)
 # spatial operations & tools
 library(mregions2)
 library(sf)
+# devtools::install_github("EMODnet/EMODnetWFS")
+library(EMODnetWFS)
 
 # plotting and tables
 library(DT) # for interactive tables
@@ -61,8 +63,59 @@ library(scico) #colour palettes
 # database connection
 con <- etn::connect_to_etn(Sys.getenv("userid"), Sys.getenv("pwd"))
 
-# retrieve spatial objects
-BPNS <- mregions2::gaz_search(3293) %>% mregions2::gaz_geometry() # Belgian EEZ
+# functions to save queried data as .rds files
+save_data <- function(data, folder){
+  base::saveRDS(data, file = paste0(folder, deparse(substitute(data)), ".rds"))
+}
+
+# load rds data ####
+load_data <- function(filestring, folder){
+  data <- base::readRDS(file = paste0(folder, filestring, ".rds"))
+  return(data)
+}
+
+```
+
+```{r query windfarm and power cable data, include=FALSE, echo=FALSE}
+
+# # only execute this chunk when querying the data for the first time, afterwards the data will be loaded
+# 
+data_path <- paste0(getwd(), "/data/")
+#   
+# # Windfarms and power cables
+# wfs_human <- EMODnetWFS::emodnet_init_wfs_client(service = "human_activities")
+# # wfs_human %>% emodnet_get_wfs_info() %>% View() #inspect available layers to query
+# 
+# layers_windfarms <- 
+#   wfs_human %>% 
+#     EMODnetWFS::emodnet_get_layers(layers = c("windfarmspoly"), crs = 4326) 
+# 
+# windfarms_polygons <- 
+#   layers_windfarms %>% 
+#     purrr::pluck("windfarmspoly") %>%
+#     dplyr::filter(country %in% c("Belgium")) #, "Netherlands"
+# 
+# save_data(data = windfarms_polygons, folder = data_path)
+#   
+# # layers_cables <- # belgian power cables are apparently not included in the data
+# #   wfs_human %>% 
+# #     EMODnetWFS::emodnet_get_layers(layers = c("pcablesrijks", "pcablesbshcontis"), crs = 4326) 
+# #
+# # pcablesrijks <- 
+# #   layers_cables %>% 
+# #     purrr::pluck("pcablesrijks") %>% 
+# #     mutate(name = "pcablesrikjs") %>% 
+# #     dplyr::select(name, the_geom)
+# # save_data(data = pcablesrijks, folder = data_path)
+```
+
+
+```{r query additional info, include=FALSE, echo=FALSE}
+# Belgian EEZ
+BPNS <- mregions2::gaz_search(3293) %>% mregions2::gaz_geometry() 
+
+# load Windfarm polygons
+windfarms_polygons <- load_data(filestring = "windfarms_polygons", folder = data_path)
 ```
 
 
@@ -86,7 +139,8 @@ within_BPNS <-
 deployments_BPNS <- 
   all_deployments %>%
     dplyr::mutate(within_BPNS = within_BPNS) %>%
-    dplyr::filter(within_BPNS == TRUE) # filter out all deployments outside of the BPNS
+    dplyr::filter(within_BPNS == TRUE) %>% # filter out all deployments outside of the BPNS
+    dplyr::mutate(year = deploy_date_time %>% lubridate::year())
 
 rm(all_deployments); rm(all_deployments_sf); rm(within_BPNS) # remove files that are not needed anymore
 
@@ -103,13 +157,28 @@ last_deployments <- # get summary of all last deployments to then join with the 
 ## deployments summarised per receiver station
 stations_BPNS <-
   deployments_BPNS %>%
-    dplyr::group_by(station_name) %>%
-    dplyr::summarise(n_deployments = dplyr::n(),
+    dplyr::group_by(station_name, year) %>%
+    dplyr::summarise(n_deploy = dplyr::n(),
                      n_receivers = receiver_id %>% unique() %>% length(),
-                     last_deploy_start = deploy_date_time %>% max(na.rm = T) %>% as.Date(),
-                     last_deploy_end = recover_date_time %>% max(na.rm = T) %>% as.Date(),
-                     year = lubridate::year(last_deploy_start))
-    
+                     deploy_latitude = deploy_latitude %>% mean(na.rm = T),
+                     deploy_longitude = deploy_longitude %>% mean(na.rm = T)) %>%
+    dplyr::mutate(years = paste(year, collapse = ", "),
+                  n_deployments = paste(n_deploy, collapse = ", ")) %>%
+  dplyr::ungroup()
+  
+  stations_BPNS <-
+    stations_BPNS %>%
+      dplyr::group_by(station_name) %>% # collapse information per year
+      dplyr::summarise(deploy_latitude = deploy_latitude %>% mean(),
+                       deploy_longitude = deploy_longitude %>% mean(),
+                       years = years %>% unique(),
+                       n_deployments = n_deployments %>% unique()) %>%
+    dplyr::left_join(deployments_BPNS %>% # get overall stats: total n of deployments, start and end of last deployment
+                       dplyr::group_by(station_name) %>% 
+                       dplyr::summarise(n_total_deploy = dplyr::n(),
+                                        last_deploy_start = deploy_date_time %>% max() %>% as.Date(),
+                                        last_deploy_end = recover_date_time %>% max() %>% as.Date()),
+                     by = join_by(station_name))
 
 # ACOUSTIC RECEIVERS
 lost_receivers <- 
@@ -122,6 +191,36 @@ lost_receivers <-
     dplyr::mutate(year = lubridate::year(deploy_date_time) %>% factor()) %>%
     dplyr::relocate(year, .before = receiver_id) %>%
     dplyr::arrange(desc(year))
+
+lost_receivers_per_station <- 
+  lost_receivers %>%
+    dplyr::filter(!is.na(deploy_date_time)) %>%
+    dplyr::group_by(station_name, year) %>%
+    dplyr::summarise(n_receivers = receiver_id %>% unique() %>% length(),
+                     deploy_latitude = deploy_latitude %>% mean(na.rm = T),
+                     deploy_longitude = deploy_longitude %>% mean(na.rm = T)) %>%
+    dplyr::mutate(years = paste(year, collapse = ", "),
+                  n_receivers_lost = paste(n_receivers, collapse = ", ")) %>%
+  dplyr::ungroup()
+  
+  lost_receivers_per_station <-
+    lost_receivers_per_station %>%
+      dplyr::group_by(station_name) %>%
+      dplyr::summarise(deploy_latitude = deploy_latitude %>% mean(),
+                       deploy_longitude = deploy_longitude %>% mean(),
+                       years = years %>% unique(),
+                       n_receivers_lost = n_receivers_lost %>% unique()) %>%
+    dplyr::left_join(lost_receivers %>% 
+                       dplyr::group_by(station_name) %>% 
+                       dplyr::summarise(n_total_lost = dplyr::n(),
+                                        last_deploy_start = deploy_date_time %>% max() %>% as.Date(),
+                                        last_deploy_end = recover_date_time %>% max() %>% as.Date()),
+                     by = join_by(station_name))
+
+lost_receivers_without_station <- # some acoustic receivers have no deployment information connected to them
+  lost_receivers %>%
+    dplyr::filter(is.na(deploy_date_time)) %>%
+    dplyr::select(receiver_id, manufacturer, receiver_model, receiver_serial_number, status)
   
 ```
 
@@ -132,7 +231,7 @@ lost_receivers <-
 Row {data-height=500}
 -------------------------------------
 
-### Map with receivers that detected S. acanthias {data-width=700}
+### Map lost acoutic receivers {data-width=700}
 
 ```{r map}
 #, include=T, echo=F
@@ -142,6 +241,10 @@ emodnet_tiles <-"https://tiles.emodnet-bathymetry.eu/2020/baselayer/web_mercator
 cite_emodnet <- "<a href='https://emodnet.ec.europa.eu'>EMODnet</a>"
 attr(cite_emodnet, "class") <- c("html", "character")
 
+## North Arrow
+north.arrow.icon <-
+  "<img src='https://www.clipartbest.com/cliparts/yTo/Lgr/yToLgryGc.png' style='width:40px;height:50px;'>"
+
 # special icons
 # icon_tag <- leaflet::makeAwesomeIcon(
 #   icon = "tag",
@@ -150,117 +253,97 @@ attr(cite_emodnet, "class") <- c("html", "character")
 #   library = "fa"
 # )
 
-# first map test
+#  map
 
 leaflet() %>%
   leaflet::addTiles(urlTemplate = emodnet_tiles,
                     # options = leaflet::tileOptions(tms = FALSE),
                     attribution = cite_emodnet,
                     group = "EMODnet bathymetry") %>%
+  leaflet::addTiles(group = "OpenStreetMap") %>%
+  addProviderTiles("Esri.WorldImagery", options = providerTileOptions(opacity = 0.6), group = "satellite") %>%
+  
+  # additional layers for context (belgian EEZ and winfarms)
   addPolygons(data = BPNS, color = "darkgrey",
               weight = 2,
               opacity = 1.0,
-              popup = ~preferredGazetteerName,
+              # popup = ~preferredGazetteerName,
               fillOpacity = 0) %>%
-  addCircleMarkers(data = last_deployments,
+  addPolygons(data = windfarms_polygons, color = "darkblue",
+              weight = 2,
+              opacity = 1.0,
+              # popup = ,
+              fillOpacity = 0) %>%
+  
+  # acoustic deployments 
+  addCircleMarkers(data = stations_BPNS,
                    lat = ~deploy_latitude,
-                   lng = ~deploy_longitude)
-
-# colour palettes
-# col_fun <- scico::scico(n = stations$deploy_latitude %>% unique() %>% length(),
-#                         palette = "roma")
-# pal <- leaflet::colorFactor(col_fun, domain = stations$deploy_latitude)
-# qpal <- colorQuantile(col_fun, domain = stations$deploy_latitude, n = 5)
-# palette_latitudes_df <- tibble(deploy_latitude = stations$deploy_latitude, color = pal(stations$deploy_latitude))
-#
-#
-# legend_latitudes <- stations %>%
-#   dplyr::mutate(bin_n5 = deploy_latitude %>% dplyr::ntile(n = 5)) %>%
-#   dplyr::group_by(bin_n5) %>%
-#   dplyr::summarise(min = deploy_latitude %>% min(),
-#                    max = deploy_latitude %>% max()) %>%
-#   dplyr::mutate(color = qpal(stations$deploy_latitude) %>% unique())
-#
-# leaflet() %>%
-#
-# #background
-#   # addTiles() %>%
-#   addProviderTiles("Esri.WorldImagery", options = providerTileOptions(opacity = 0.6), group = "satellite") %>%
-#   leaflet::addTiles(urlTemplate = emodnet_tiles,
-#                     # options = leaflet::tileOptions(tms = FALSE),
-#                     attribution = cite_emodnet,
-#                     group = "EMODnet bathymetry") %>%
-#   # addRasterImage(bathy_belgium_raster, opacity = 1, colors = "Spectral", group = "bathymetry") %>%
-#   # addPolygons(data = coastline_BE_poly, opacity = 1, fillColor = "grey", weight = 0, fillOpacity = 0.7, group = "bathymetry") %>% #"#ECE4BF"
-#   addTiles(group = "OpenStreetMap") %>%
-#
-# #data: receiver stations
-#   addCircleMarkers(data = stations,
-#                    # clusterOptions = markerClusterOptions(showCoverageOnHover = F, zoomToBoundsOnClick = T, freezeAtZoom = 7),
-#                    lat = ~deploy_latitude,
-#                    lng = ~deploy_longitude,
-#                    radius = 5,
-#                    color = "black",
-#                    weight = 1,
-#                    fillOpacity = 1,
-#                    fillColor = ~pal(deploy_latitude),
-#                    opacity = 1,
-#                    label = ~paste0("station ", station_name),
-#                    popup = ~paste0("lat: ", deploy_latitude, ", lon: ", deploy_longitude),
-#                    group = "receiver stations"
-#                    ) %>%
-#
-# #data: tagging locations
-#   addAwesomeMarkers(data = tagging_locations,
-#                    icon = icon_tag,
-#                    clusterOptions = markerClusterOptions(), #showCoverageOnHover = T, zoomToBoundsOnClick = T,
-#                    lat = ~releaseLatitude,
-#                    lng = ~releaseLongitude,
-#                    # radius = 5,
-#                    # fillOpacity = 0.7,
-#                    # fillColor = "yellow",
-#                    # opacity = 0,
-#                    label = ~paste0("name: ", tagging_location),
-#                    popup = ~paste0("lat: ", releaseLatitude, ", lon: ", releaseLongitude, ", #sharks tagged: ", ind_tagged),
-#                    group = "tagging locations"
-#                    ) %>%
-#
-# # add-ons
-# leaflet.extras::addFullscreenControl() %>%
-#   leafem::addMouseCoordinates() %>%
-#   addScaleBar(position = "bottomright",
-#               options = scaleBarOptions(
-#                 maxWidth = 150,
-#               imperial = FALSE)) %>%
-#
-# # layers control
-#   addLayersControl(position = "topright" ,
-#                    baseGroups = c("EMODnet bathymetry", "satellite", "OpenStreetMap"),
-#                    overlayGroups = c("receiver stations", "tagging locations"),
-#                    options = layersControlOptions(collapsed = FALSE)) %>%
-#   hideGroup("tagging locations") %>%
-#
-# # legend
-#   addLegend(position = "bottomleft",
-#             colors = legend_latitudes$color %>% rev(),
-#             labels = paste0(legend_latitudes$min %>% round(), " - ", legend_latitudes$max %>% round()) %>% rev(),
-#             opacity = 1,
-#             title = "Latitude")
-
-# MWE
-
-# leaflet() %>%
-#   addTiles() %>%
-#   addCircleMarkers(data = stations,
-#                    lat = ~deploy_latitude,
-#                    lng = ~deploy_longitude,
-#                    color = ~pal2(deploy_latitude)) %>%
-#   addLegend(position = "bottomleft",
-#             colors = legend_latitudes$color,
-#             labels = paste0(legend_latitudes$min %>% round(), " - ", legend_latitudes$max %>% round()),
-#             opacity = 1,
-#             title = "Latitude")
-
+                   lng = ~deploy_longitude,
+                   radius = ~(log(n_total_deploy) * 1.5) + 2,
+                   color = "black",
+                   opacity = 1,
+                   weight = 2,
+                   fillOpacity = 0.4,
+                   fillColor = "black",
+                   label = ~paste0("station ", station_name),
+                   # popup = ~paste0("lat: ", deploy_latitude, ", lon: ", deploy_longitude),
+                   popup = ~paste(
+                           "<br>", "<b>Station:</b> ", station_name, "<br>", 
+                           "<b>Total # of deployments:</b> ", n_total_deploy, "<br>", 
+                           "<b>Deployment years:</b> ", years, "<br>", 
+                           "<b># deployments per year:</b> ",n_deployments, "<br>",
+                           "<b>Last deployment:</b> ", last_deploy_start, " - ", last_deploy_end, "<br>" #,
+                           # "<br>", "<b>Ac. proj. code:</b> ", acoustic_project_code,
+                           ),
+                   group = "acoustic deployments"
+                   ) %>%
+  
+  # lost receivers
+  addCircleMarkers(data = lost_receivers_per_station,
+                   lat = ~deploy_latitude,
+                   lng = ~deploy_longitude,
+                   radius = ~(log(n_total_lost) * 2.5) + 3,
+                   color = "red",
+                   weight = 1,
+                   fillOpacity = 1,
+                   fillColor = "red",
+                   label = ~paste0("station ", station_name),
+                   # popup = ~paste0("lat: ", deploy_latitude, ", lon: ", deploy_longitude),
+                   popup = ~paste(
+                           "<br>", "<b>Station:</b> ", station_name, "<br>", 
+                           "<b>Total # of lost receivers:</b> ", n_total_lost, "<br>", 
+                           "<b>Years:</b> ", years, "<br>", 
+                           "<b># receivers lost per year:</b> ",n_receivers_lost, "<br>" #,
+                           # "<b>Last deployment:</b> ", last_deploy_start, " - ", last_deploy_end, "<br>" #,
+                           # "<br>", "<b>Ac. proj. code:</b> ", acoustic_project_code,
+                           ),
+                   # group = "lost acoustic receivers"
+                   group = "<span style=color:red>lost acoustic receivers</span>"
+                   ) %>%
+  
+  # add-ons
+  leaflet.extras::addFullscreenControl() %>%
+    leafem::addMouseCoordinates() %>%
+    addScaleBar(position = "bottomright",
+                options = scaleBarOptions(
+                  maxWidth = 150,
+                imperial = FALSE)) %>%
+  addControl( html = north.arrow.icon,
+              position = "topleft",
+              className = "fieldset {border: 0;}") %>%
+  
+  # layers control
+    addLayersControl(position = "topright" ,
+                     baseGroups = c("EMODnet bathymetry", "satellite", "OpenStreetMap"),
+                     overlayGroups = c("acoustic deployments", "<span style=color:red>lost acoustic receivers</span>"),
+                     options = layersControlOptions(collapsed = FALSE)) %>%
+  
+  # legend
+  addLegend(position = "bottomleft",
+            colors = c("darkgrey","darkblue"),
+            labels = c("Belgian EEZ", "Belgian Offshore Wind Farms"),
+            opacity = 1)
+            
 ```
 
     
@@ -277,11 +360,31 @@ Row {data-height=1200}
 -------------------------------------
 
 
-### Table 
+### Table containing info on lost receivers and last deployment 
+
+Below are listed the receivers with the `status = lost/broken` that could be found in the deployments. 
+
 
 ```{r table}
 
+# DT::datatable(lost_receivers %>%
+#                 dplyr::filter(!is.na(deploy_date_time)) %>%
+#                 dplyr::select(!manufacturer) %>%
+#                 dplyr::mutate(deploy_date_time = deploy_date_time %>% as.Date()),
+#               rownames = F,
+#               filter = 'top',
+#               extension = 'Buttons',
+#               options = list(
+#                 dom = 'Bfrtip',
+#                 buttons = c('pdf', 'csv', 'excel', 'print','copy'),
+#                 pageLength = 20,
+#                 autoWidth = TRUE,
+#                 scrollX='500px')
+#                 # ,columnDefs = list(list(width = '400px', targets = list(15))
+#                 )
+
 DT::datatable(lost_receivers %>%
+                dplyr::filter(!is.na(deploy_date_time)) %>%
                 dplyr::select(!manufacturer) %>%
                 dplyr::mutate(deploy_date_time = deploy_date_time %>% as.Date()),
               rownames = F,
@@ -290,27 +393,36 @@ DT::datatable(lost_receivers %>%
               options = list(
                 dom = 'Bfrtip',
                 buttons = c('pdf', 'csv', 'excel', 'print','copy'),
-                pageLength = 10, 
+                # pageLength = 20,
                 autoWidth = TRUE,
-                scrollX='400px',
-                columnDefs = list(list(width = '400px', targets = list(14)))
-
+                scrollX='400px')
                 )
-            )
-          # ))
-          #     options = list(pageLength = 10, autoWidth = TRUE, columnDefs = list(list(className = 'dt-center', targets = '_all')))
-          #     ) 
-
-# %>%
-#   formatStyle(
-#   c('receiver_id', 'battery_estimated_end_date'),
-#   fontWeight = "bold") %>%
-#   formatStyle(
-#   'needs_battery_change',
-#   backgroundColor = styleEqual(c(0, 1), c('#90BF87', '#F9938E')))
-
 ```
 
+
+Row {data-height=800}
+-------------------------------------
+
+
+### Table containing info on lost receivers without deployment 
+
+`r lost_receivers_without_station %>% nrow()` receivers did not have any deployment information or the year they were lost associated. They are listed in the table below.
+
+```{r table lost receivers without station}
+
+DT::datatable(lost_receivers_without_station,
+              rownames = F,
+              filter = 'top',
+              extension = 'Buttons',
+              options = list(
+                dom = 'Bfrtip',
+                buttons = c('pdf', 'csv', 'excel', 'print','copy'),
+                # pageLength = 20,
+                autoWidth = TRUE,
+                scrollX='20%')
+                )
+         
+```
 
 <!-- Details: Acoustic Projects & Detections -->
 <!-- ===================================== -->
