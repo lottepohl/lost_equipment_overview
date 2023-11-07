@@ -5,12 +5,18 @@ output:
     source_code: embed
     orientation: rows
     vertical_layout: scroll
-    theme: 
+    theme:
       version: 4
       bootswatch: litera
-editor_options: 
+editor_options:
   chunk_output_type: console
 ---
+
+<!-- flexdashboard YAML settings: -->
+
+<!-- output: html_document -->
+<!-- editor_options:  -->
+<!--   chunk_output_type: console -->
 
 <!-- README: -->
 <!-- * This script produces an R flexdashboard showing overview maps and tables about lost equipment in the Belgian Part of the North Sea (BPNS), that is, acoustic receivers, CPODs, soundtraps and hydrophones. -->
@@ -85,14 +91,24 @@ deployments_BPNS <-
 rm(all_deployments); rm(all_deployments_sf); rm(within_BPNS) # remove files that are not needed anymore
 
 ## last deployments
-last_deployments <- 
+last_deployments <- # get summary of all last deployments to then join with the lost/broken receivers
   deployments_BPNS %>%
     dplyr::group_by(receiver_id) %>%
     dplyr::summarise(deploy_date_time = deploy_date_time %>% max(na.rm = T)) %>%
     dplyr::left_join(deployments_BPNS %>%
                        dplyr::select(receiver_id, deployment_id, deploy_date_time, station_name, deploy_latitude, deploy_longitude, 
-                                     mooring_type, battery_installation_date, acoustic_project_code, recover_date_time, comments),
+                                     mooring_type, acoustic_project_code, recover_date_time, comments),
                      by = join_by(receiver_id, deploy_date_time))
+
+## deployments summarised per receiver station
+stations_BPNS <-
+  deployments_BPNS %>%
+    dplyr::group_by(station_name) %>%
+    dplyr::summarise(n_deployments = dplyr::n(),
+                     n_receivers = receiver_id %>% unique() %>% length(),
+                     last_deploy_start = deploy_date_time %>% max(na.rm = T) %>% as.Date(),
+                     last_deploy_end = recover_date_time %>% max(na.rm = T) %>% as.Date(),
+                     year = lubridate::year(last_deploy_start))
     
 
 # ACOUSTIC RECEIVERS
@@ -113,149 +129,140 @@ lost_receivers <-
 <!-- Overview: Receiver stations --> 
 <!-- ===================================== -->
 
-Row {data-height=800}
+Row {data-height=500}
 -------------------------------------
-    
+
 ### Map with receivers that detected S. acanthias {data-width=700}
 
-```{r maptest}
+```{r map}
+#, include=T, echo=F
 
-leaflet::leaflet() %>% leaflet::addTiles()
+# EMODnet Bathymetry layer
+emodnet_tiles <-"https://tiles.emodnet-bathymetry.eu/2020/baselayer/web_mercator/{z}/{x}/{y}.png"
+cite_emodnet <- "<a href='https://emodnet.ec.europa.eu'>EMODnet</a>"
+attr(cite_emodnet, "class") <- c("html", "character")
+
+# special icons
+# icon_tag <- leaflet::makeAwesomeIcon(
+#   icon = "tag",
+#   iconColor = "black",
+#   markerColor = "yellow",
+#   library = "fa"
+# )
+
+# first map test
+
+leaflet() %>%
+  leaflet::addTiles(urlTemplate = emodnet_tiles,
+                    # options = leaflet::tileOptions(tms = FALSE),
+                    attribution = cite_emodnet,
+                    group = "EMODnet bathymetry") %>%
+  addPolygons(data = BPNS, color = "darkgrey",
+              weight = 2,
+              opacity = 1.0,
+              popup = ~preferredGazetteerName,
+              fillOpacity = 0) %>%
+  addCircleMarkers(data = last_deployments,
+                   lat = ~deploy_latitude,
+                   lng = ~deploy_longitude)
+
+# colour palettes
+# col_fun <- scico::scico(n = stations$deploy_latitude %>% unique() %>% length(),
+#                         palette = "roma")
+# pal <- leaflet::colorFactor(col_fun, domain = stations$deploy_latitude)
+# qpal <- colorQuantile(col_fun, domain = stations$deploy_latitude, n = 5)
+# palette_latitudes_df <- tibble(deploy_latitude = stations$deploy_latitude, color = pal(stations$deploy_latitude))
+#
+#
+# legend_latitudes <- stations %>%
+#   dplyr::mutate(bin_n5 = deploy_latitude %>% dplyr::ntile(n = 5)) %>%
+#   dplyr::group_by(bin_n5) %>%
+#   dplyr::summarise(min = deploy_latitude %>% min(),
+#                    max = deploy_latitude %>% max()) %>%
+#   dplyr::mutate(color = qpal(stations$deploy_latitude) %>% unique())
+#
+# leaflet() %>%
+#
+# #background
+#   # addTiles() %>%
+#   addProviderTiles("Esri.WorldImagery", options = providerTileOptions(opacity = 0.6), group = "satellite") %>%
+#   leaflet::addTiles(urlTemplate = emodnet_tiles,
+#                     # options = leaflet::tileOptions(tms = FALSE),
+#                     attribution = cite_emodnet,
+#                     group = "EMODnet bathymetry") %>%
+#   # addRasterImage(bathy_belgium_raster, opacity = 1, colors = "Spectral", group = "bathymetry") %>%
+#   # addPolygons(data = coastline_BE_poly, opacity = 1, fillColor = "grey", weight = 0, fillOpacity = 0.7, group = "bathymetry") %>% #"#ECE4BF"
+#   addTiles(group = "OpenStreetMap") %>%
+#
+# #data: receiver stations
+#   addCircleMarkers(data = stations,
+#                    # clusterOptions = markerClusterOptions(showCoverageOnHover = F, zoomToBoundsOnClick = T, freezeAtZoom = 7),
+#                    lat = ~deploy_latitude,
+#                    lng = ~deploy_longitude,
+#                    radius = 5,
+#                    color = "black",
+#                    weight = 1,
+#                    fillOpacity = 1,
+#                    fillColor = ~pal(deploy_latitude),
+#                    opacity = 1,
+#                    label = ~paste0("station ", station_name),
+#                    popup = ~paste0("lat: ", deploy_latitude, ", lon: ", deploy_longitude),
+#                    group = "receiver stations"
+#                    ) %>%
+#
+# #data: tagging locations
+#   addAwesomeMarkers(data = tagging_locations,
+#                    icon = icon_tag,
+#                    clusterOptions = markerClusterOptions(), #showCoverageOnHover = T, zoomToBoundsOnClick = T,
+#                    lat = ~releaseLatitude,
+#                    lng = ~releaseLongitude,
+#                    # radius = 5,
+#                    # fillOpacity = 0.7,
+#                    # fillColor = "yellow",
+#                    # opacity = 0,
+#                    label = ~paste0("name: ", tagging_location),
+#                    popup = ~paste0("lat: ", releaseLatitude, ", lon: ", releaseLongitude, ", #sharks tagged: ", ind_tagged),
+#                    group = "tagging locations"
+#                    ) %>%
+#
+# # add-ons
+# leaflet.extras::addFullscreenControl() %>%
+#   leafem::addMouseCoordinates() %>%
+#   addScaleBar(position = "bottomright",
+#               options = scaleBarOptions(
+#                 maxWidth = 150,
+#               imperial = FALSE)) %>%
+#
+# # layers control
+#   addLayersControl(position = "topright" ,
+#                    baseGroups = c("EMODnet bathymetry", "satellite", "OpenStreetMap"),
+#                    overlayGroups = c("receiver stations", "tagging locations"),
+#                    options = layersControlOptions(collapsed = FALSE)) %>%
+#   hideGroup("tagging locations") %>%
+#
+# # legend
+#   addLegend(position = "bottomleft",
+#             colors = legend_latitudes$color %>% rev(),
+#             labels = paste0(legend_latitudes$min %>% round(), " - ", legend_latitudes$max %>% round()) %>% rev(),
+#             opacity = 1,
+#             title = "Latitude")
+
+# MWE
+
+# leaflet() %>%
+#   addTiles() %>%
+#   addCircleMarkers(data = stations,
+#                    lat = ~deploy_latitude,
+#                    lng = ~deploy_longitude,
+#                    color = ~pal2(deploy_latitude)) %>%
+#   addLegend(position = "bottomleft",
+#             colors = legend_latitudes$color,
+#             labels = paste0(legend_latitudes$min %>% round(), " - ", legend_latitudes$max %>% round()),
+#             opacity = 1,
+#             title = "Latitude")
+
 ```
 
-
-<!-- ```{r map} -->
-<!-- #, include=T, echo=F -->
-
-<!-- # EMODnet Bathymetry layer -->
-<!-- # emodnet_tiles <-"https://tiles.emodnet-bathymetry.eu/2020/baselayer/web_mercator/{z}/{x}/{y}.png" -->
-<!-- # cite_emodnet <- "<a href='https://emodnet.ec.europa.eu'>EMODnet</a>" -->
-<!-- # attr(cite_emodnet, "class") <- c("html", "character") -->
-
-<!-- # special icons -->
-<!-- # icon_tag <- leaflet::makeAwesomeIcon( -->
-<!-- #   icon = "tag", -->
-<!-- #   iconColor = "black", -->
-<!-- #   markerColor = "yellow", -->
-<!-- #   library = "fa" -->
-<!-- # ) -->
-
-<!-- # first map test -->
-
-<!-- leaflet() %>% -->
-<!--   addTiles() #%>% -->
-<!--   # leaflet::addTiles(urlTemplate = emodnet_tiles, -->
-<!--   #                   # options = leaflet::tileOptions(tms = FALSE), -->
-<!--   #                   attribution = cite_emodnet, -->
-<!--   #                   group = "EMODnet bathymetry") %>% -->
-<!--   # addPolygons(data = BPNS, color = "darkgrey", -->
-<!--   #             weight = 2, -->
-<!--   #             opacity = 1.0, -->
-<!--   #             popup = ~preferredGazetteerName, -->
-<!--   #             fillOpacity = 0) %>% -->
-<!--   # addCircleMarkers(data = last_deployments, -->
-<!--   #                  lat = ~deploy_latitude, -->
-<!--   #                  lng = ~deploy_longitude) -->
-
-<!-- # colour palettes -->
-<!-- # col_fun <- scico::scico(n = stations$deploy_latitude %>% unique() %>% length(), -->
-<!-- #                         palette = "roma") -->
-<!-- # pal <- leaflet::colorFactor(col_fun, domain = stations$deploy_latitude) -->
-<!-- # qpal <- colorQuantile(col_fun, domain = stations$deploy_latitude, n = 5) -->
-<!-- # palette_latitudes_df <- tibble(deploy_latitude = stations$deploy_latitude, color = pal(stations$deploy_latitude)) -->
-<!-- #  -->
-<!-- #  -->
-<!-- # legend_latitudes <- stations %>%  -->
-<!-- #   dplyr::mutate(bin_n5 = deploy_latitude %>% dplyr::ntile(n = 5)) %>% -->
-<!-- #   dplyr::group_by(bin_n5) %>% -->
-<!-- #   dplyr::summarise(min = deploy_latitude %>% min(), -->
-<!-- #                    max = deploy_latitude %>% max()) %>% -->
-<!-- #   dplyr::mutate(color = qpal(stations$deploy_latitude) %>% unique()) -->
-<!-- #  -->
-<!-- # leaflet() %>%  -->
-<!-- #    -->
-<!-- # #background -->
-<!-- #   # addTiles() %>% -->
-<!-- #   addProviderTiles("Esri.WorldImagery", options = providerTileOptions(opacity = 0.6), group = "satellite") %>% -->
-<!-- #   leaflet::addTiles(urlTemplate = emodnet_tiles, -->
-<!-- #                     # options = leaflet::tileOptions(tms = FALSE), -->
-<!-- #                     attribution = cite_emodnet, -->
-<!-- #                     group = "EMODnet bathymetry") %>% -->
-<!-- #   # addRasterImage(bathy_belgium_raster, opacity = 1, colors = "Spectral", group = "bathymetry") %>% -->
-<!-- #   # addPolygons(data = coastline_BE_poly, opacity = 1, fillColor = "grey", weight = 0, fillOpacity = 0.7, group = "bathymetry") %>% #"#ECE4BF" -->
-<!-- #   addTiles(group = "OpenStreetMap") %>% -->
-<!-- #  -->
-<!-- # #data: receiver stations -->
-<!-- #   addCircleMarkers(data = stations, -->
-<!-- #                    # clusterOptions = markerClusterOptions(showCoverageOnHover = F, zoomToBoundsOnClick = T, freezeAtZoom = 7), -->
-<!-- #                    lat = ~deploy_latitude, -->
-<!-- #                    lng = ~deploy_longitude, -->
-<!-- #                    radius = 5, -->
-<!-- #                    color = "black", -->
-<!-- #                    weight = 1, -->
-<!-- #                    fillOpacity = 1, -->
-<!-- #                    fillColor = ~pal(deploy_latitude), -->
-<!-- #                    opacity = 1, -->
-<!-- #                    label = ~paste0("station ", station_name), -->
-<!-- #                    popup = ~paste0("lat: ", deploy_latitude, ", lon: ", deploy_longitude), -->
-<!-- #                    group = "receiver stations" -->
-<!-- #                    ) %>% -->
-<!-- #    -->
-<!-- # #data: tagging locations -->
-<!-- #   addAwesomeMarkers(data = tagging_locations, -->
-<!-- #                    icon = icon_tag, -->
-<!-- #                    clusterOptions = markerClusterOptions(), #showCoverageOnHover = T, zoomToBoundsOnClick = T,  -->
-<!-- #                    lat = ~releaseLatitude, -->
-<!-- #                    lng = ~releaseLongitude, -->
-<!-- #                    # radius = 5, -->
-<!-- #                    # fillOpacity = 0.7, -->
-<!-- #                    # fillColor = "yellow", -->
-<!-- #                    # opacity = 0, -->
-<!-- #                    label = ~paste0("name: ", tagging_location), -->
-<!-- #                    popup = ~paste0("lat: ", releaseLatitude, ", lon: ", releaseLongitude, ", #sharks tagged: ", ind_tagged), -->
-<!-- #                    group = "tagging locations" -->
-<!-- #                    ) %>% -->
-<!-- #  -->
-<!-- # # add-ons -->
-<!-- # leaflet.extras::addFullscreenControl() %>% -->
-<!-- #   leafem::addMouseCoordinates() %>% -->
-<!-- #   addScaleBar(position = "bottomright", -->
-<!-- #               options = scaleBarOptions( -->
-<!-- #                 maxWidth = 150, -->
-<!-- #               imperial = FALSE)) %>% -->
-<!-- #    -->
-<!-- # # layers control -->
-<!-- #   addLayersControl(position = "topright" , -->
-<!-- #                    baseGroups = c("EMODnet bathymetry", "satellite", "OpenStreetMap"), -->
-<!-- #                    overlayGroups = c("receiver stations", "tagging locations"), -->
-<!-- #                    options = layersControlOptions(collapsed = FALSE)) %>% -->
-<!-- #   hideGroup("tagging locations") %>% -->
-<!-- #    -->
-<!-- # # legend -->
-<!-- #   addLegend(position = "bottomleft", -->
-<!-- #             colors = legend_latitudes$color %>% rev(), -->
-<!-- #             labels = paste0(legend_latitudes$min %>% round(), " - ", legend_latitudes$max %>% round()) %>% rev(), -->
-<!-- #             opacity = 1, -->
-<!-- #             title = "Latitude") -->
-
-<!-- # MWE -->
-
-<!-- # leaflet() %>% -->
-<!-- #   addTiles() %>% -->
-<!-- #   addCircleMarkers(data = stations, -->
-<!-- #                    lat = ~deploy_latitude, -->
-<!-- #                    lng = ~deploy_longitude, -->
-<!-- #                    color = ~pal2(deploy_latitude)) %>% -->
-<!-- #   addLegend(position = "bottomleft", -->
-<!-- #             colors = legend_latitudes$color, -->
-<!-- #             labels = paste0(legend_latitudes$min %>% round(), " - ", legend_latitudes$max %>% round()), -->
-<!-- #             opacity = 1, -->
-<!-- #             title = "Latitude") -->
-
-<!-- ``` -->
-
-<!-- > Map with receiver deployments and acoustic detections. -->
- 
     
 ### side row {data-width=300}
     
@@ -275,7 +282,8 @@ Row {data-height=1200}
 ```{r table}
 
 DT::datatable(lost_receivers %>%
-                dplyr::select(!manufacturer),
+                dplyr::select(!manufacturer) %>%
+                dplyr::mutate(deploy_date_time = deploy_date_time %>% as.Date()),
               rownames = F,
               filter = 'top',
               extension = 'Buttons',
