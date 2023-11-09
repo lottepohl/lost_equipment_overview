@@ -55,6 +55,12 @@ library(EMODnetWFS)
 
 # plotting and tables
 library(DT) # for interactive tables
+options(DT.options = list(dom = 'Bfrtip',
+                          buttons = c('pdf', 'csv', 'excel', 'print','copy'),
+                          scrollY="500px",
+                          scrollX="100px", 
+                          pageLength = 13, 
+                          autoWidth = TRUE))
 library(ggplot2)
 library(kableExtra)
 library(plotly)
@@ -187,9 +193,10 @@ lost_receivers <-
     dplyr::select(!tidyr::starts_with("ar_")) %>%
     dplyr::left_join(last_deployments,
                      by = join_by(receiver_id)) %>%
-    dplyr::select(!c(modem_address, battery_estimated_life, owner_organization, financing_project, built_in_acoustic_tag_id)) %>%
-    dplyr::mutate(year = lubridate::year(deploy_date_time) %>% factor()) %>%
-    dplyr::relocate(year, .before = receiver_id) %>%
+    dplyr::select(!c(modem_address, battery_estimated_life)) %>%
+    dplyr::mutate(year = lubridate::year(deploy_date_time) %>% factor(),
+                  equipment_type = "acoustic receiver") %>%
+    dplyr::relocate(c(year,equipment_type), .before = receiver_id) %>%
     dplyr::arrange(desc(year))
 
 lost_receivers_per_station <- 
@@ -222,6 +229,81 @@ lost_receivers_without_station <- # some acoustic receivers have no deployment i
     dplyr::filter(is.na(deploy_date_time)) %>%
     dplyr::select(receiver_id, manufacturer, receiver_model, receiver_serial_number, status)
   
+```
+
+```{r underwater acoustics context, include=FALSE, echo=FALSE}
+ua_deployments <- 
+  utils::read.csv(file = paste0(getwd(), "/data/Deployments_underwater_acoustics.csv")) %>%
+    dplyr::rename(receiver_id = receiver,
+                  acoustic_project_code = projectName,
+                  deploy_date_time = deployDateTime,
+                  recover_date_time = recoverDateTime,
+                  station_name = stationName,
+                  deploy_latitude = deployLat,
+                  deploy_longitude = deployLong,
+                  mooring_type = mooringType,
+                  deployment_id = acousticreleasenumber) %>%
+    dplyr::mutate(deploy_date_time = deploy_date_time %>% as.Date(format = "%Y-%m-%d"),
+                  recover_date_time = recover_date_time %>% as.Date(format = "%Y-%m-%d"))
+
+## last deployments of underwater acoustics equipment
+ua_last_deployments <- # get summary of all last deployments to then join with the lost/broken receivers
+  ua_deployments %>%
+    dplyr::group_by(receiver_id) %>%
+    dplyr::summarise(deploy_date_time = deploy_date_time %>% max(na.rm = T)) %>%
+    dplyr::left_join(ua_deployments %>%
+                       dplyr::select(receiver_id, deploy_date_time, station_name, deploy_latitude, deploy_longitude,
+                                     mooring_type, acoustic_project_code, recover_date_time, comments),
+                     by = join_by(receiver_id, deploy_date_time))
+
+ua_equipment_lost <- 
+  utils::read.csv(file = paste0(getwd(), "/data/Receivers_underwater_acoustics.csv")) %>%
+    dplyr::filter(status %in% c("Lost", "Broken")) %>%
+    dplyr::rename(receiver_id = receiver,
+                  receiver_serial_number = serialNumber,
+                  receiver_model = modelNumber,
+                  owner_organization = ownerOrganization) %>%
+    dplyr::mutate(equipment_type = ifelse(manufacturer == "CHELONIA", "CPOD",
+                                           ifelse(manufacturer == "OCEANINSTRUMENTS", "soundtrap",
+                                                  "hydrophone")))
+
+
+# merge data about last deployment with receiver id
+
+ua_equipment_lost <- 
+  ua_equipment_lost %>%
+    dplyr::left_join(ua_deployments %>%
+                       dplyr::group_by(receiver_id) %>%
+                       dplyr::summarise(deploy_date_time = deploy_date_time %>% max(na.rm = T),
+                                        recover_date_time = recover_date_time %>% max()),
+                     by = join_by(receiver_id)) %>%
+    dplyr::mutate(year = lubridate::year(deploy_date_time) %>% factor())
+
+
+# JOIN acoustic telemetry and underwater acoustics
+
+all_equipment_lost <- 
+  dplyr::bind_rows(lost_receivers, ua_equipment_lost)
+
+#table with all lost equipment
+
+DT::datatable(all_equipment_lost %>%
+                # dplyr::filter(!is.na(deploy_date_time)) %>%
+                # dplyr::select(!c(manufacturer, receiver_model)) %>%
+                dplyr::mutate(deploy_date_time = deploy_date_time %>% as.Date(),
+                              recover_date_time = recover_date_time %>% as.Date()),
+              rownames = F,
+              filter = 'top',
+              extension = 'Buttons',
+              # options = list(pagelength = 10)
+              # ,options = list(
+              #   dom = 'Bfrtip',
+              #   buttons = c('pdf', 'csv', 'excel', 'print','copy'),
+              #   # pageLength = 20,
+              #   autoWidth = TRUE
+              #   # ,scrollX = TRUE
+                # )
+                )
 ```
 
 
@@ -356,7 +438,7 @@ leaflet() %>%
 
 
 
-Row {data-height=1200}
+Row {data-height=800}
 -------------------------------------
 
 
@@ -384,18 +466,21 @@ Below are listed the receivers with the `status = lost/broken` that could be fou
 #                 )
 
 DT::datatable(lost_receivers %>%
-                dplyr::filter(!is.na(deploy_date_time)) %>%
-                dplyr::select(!manufacturer) %>%
-                dplyr::mutate(deploy_date_time = deploy_date_time %>% as.Date()),
+                # dplyr::filter(!is.na(deploy_date_time)) %>%
+                # dplyr::select(!c(manufacturer, receiver_model)) %>%
+                dplyr::mutate(deploy_date_time = deploy_date_time %>% as.Date(),
+                              recover_date_time = recover_date_time %>% as.Date()),
               rownames = F,
               filter = 'top',
               extension = 'Buttons',
-              options = list(
-                dom = 'Bfrtip',
-                buttons = c('pdf', 'csv', 'excel', 'print','copy'),
-                # pageLength = 20,
-                autoWidth = TRUE,
-                scrollX='400px')
+              # options = list(pagelength = 10)
+              # ,options = list(
+              #   dom = 'Bfrtip',
+              #   buttons = c('pdf', 'csv', 'excel', 'print','copy'),
+              #   # pageLength = 20,
+              #   autoWidth = TRUE
+              #   # ,scrollX = TRUE
+                # )
                 )
 ```
 
@@ -413,17 +498,22 @@ Row {data-height=800}
 DT::datatable(lost_receivers_without_station,
               rownames = F,
               filter = 'top',
-              extension = 'Buttons',
-              options = list(
-                dom = 'Bfrtip',
-                buttons = c('pdf', 'csv', 'excel', 'print','copy'),
-                # pageLength = 20,
-                autoWidth = TRUE,
-                scrollX='20%')
+              extension = 'Buttons'
+              # ,options = list(
+              #   dom = 'Bfrtip',
+              #   buttons = c('pdf', 'csv', 'excel', 'print','copy'),
+              #   # pageLength = 20,
+              #   autoWidth = TRUE
+              #   # ,scrollX='20%'
+                # )
                 )
          
 ```
 
 <!-- Details: Acoustic Projects & Detections -->
 <!-- ===================================== -->
-
+<!-- <style> -->
+<!-- .datatables{ -->
+<!--     overflow: auto; -->
+<!-- } -->
+<!-- </style> -->
